@@ -1,9 +1,9 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Signup from './../components/Signup'
-import Login from './../components/Login'
-import Home from './../components/Home'
-import AuthGuard from './auth'
+import Vue from 'vue';
+import Router from 'vue-router';
+import UserSignUp from '@/views/User/UserSignUp';
+import UserLogin from '@/views/User/UserLogin';
+import Home from '@/views/Home/Home';
+import AuthGuard from '@/router/auth';
 
 Vue.use(Router)
 
@@ -13,12 +13,12 @@ let router = new Router({
     {
       path: '/signup',
       name: 'signup',
-      component: Signup
+      component: UserSignUp
     },
     {
       path: '/login',
       name: 'login',
-      component: Login
+      component: UserLogin
     },
     {
       path: '/',
