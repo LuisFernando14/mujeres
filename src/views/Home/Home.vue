@@ -1,15 +1,15 @@
 <template>
   <div>
-    <Navigation />
+    <NewsComp/>
   </div>
 </template>
 
 <script>
-import Navigation from '@/components/Navigation'
-
+import NewsComp from '@/components/NewsComp';
 export default {
-  components: { 
-    Navigation,
+  name:'Home',
+  components: {
+    NewsComp
   }
 }
 </script>
