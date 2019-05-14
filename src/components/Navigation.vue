@@ -1,14 +1,11 @@
 <template>
 <div>
+  <v-toolbar color="teal" dark>
+    <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+    <img src="@/assets/logo_banner.png" alt="">
+  </v-toolbar>
+  <Navigation ref="date" />
   <v-layout wrap style="height: 200px;">
-    <v-container>
-      <v-layout justify-center>
-        <v-btn color="pink" dark @click.stop="drawer = !drawer">
-          Toggle
-        </v-btn>
-      </v-layout>
-    </v-container>
-
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list class="pa-1">
         <v-list-tile avatar>
@@ -25,7 +22,8 @@
       <v-list class="pt-0" dense>
         <v-divider></v-divider>
 
-        <v-list-tile v-for="item in items" :key="item.title" @click="">
+          <button v-on:click="say('what')">Say what</button>
+        <v-list-tile v-for="item in items" :key="item.title" @click.stop='showBar()'>
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
@@ -49,11 +47,6 @@
           { title: 'Home', icon: 'dashboard' },
           { title: 'About', icon: 'question_answer' }
         ],
-      }
-    },
-    methods:{
-      showBar () {
-        drawer = !drawer;
       }
     }
   }
