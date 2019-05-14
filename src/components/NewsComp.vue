@@ -9,7 +9,6 @@
           height="200px"
         >
         </v-img>
-
         <v-card-title primary-title>
           <div>
             <div class="headline">Top western road trips</div>
