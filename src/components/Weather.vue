@@ -1,35 +1,25 @@
 <template>
   <div class="container">
     <div class="container-fluid">
-      <table class="table">
-      <thead class="thead-dark">
-        <tr class>
-          <th scope="col" colspan="4" class="bg-success">
-            <h1 class="display-1">Aguacate</h1>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td v-for="card in cards" :key="card.title">
-            <div class="card text-center">
-              <div class="card-header">
-                <h4>{{card.state}}</h4>
-              </div>
-
-              <div class="card-body">
-                <img v-bind:src="card.src" style="width:80px">
-
-                <h5 class="card-title">{{card.title}}</h5>
-                <h1 class="display-1">{{card.grade}}</h1>
-              </div>
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          <h1 class="h1 text-center">Aguacate</h1>
+        </div>
+        <div class="card-group">
+          <div v-for="card in cards" :key="card.title" class="card text-center">
+            <div class="card-header">
+              <h4>{{card.state}}</h4>
             </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            <div class="card-body">
+              <img v-bind:src="card.src" style="width:80px">
+
+              <h5 class="card-title">{{card.title}}</h5>
+              <h1 class="display-4">{{card.grade}}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!---->
   </div>
 </template>
 <script>

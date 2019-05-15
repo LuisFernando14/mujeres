@@ -1,8 +1,6 @@
 <template>
   <div>
-    <NewsComp />
     <Weather />
-    <NewsComp />
   </div>
 </template>
 
