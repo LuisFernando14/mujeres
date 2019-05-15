@@ -4,6 +4,7 @@ import UserSignUp from '@/views/User/UserSignUp';
 import UserLogin from '@/views/User/UserLogin';
 import Home from '@/views/Home/Home';
 import AuthGuard from '@/router/auth';
+import Classifieds from '@/views/Classifieds/Classifieds.vue';
 
 Vue.use(Router)
 
@@ -27,7 +28,12 @@ let router = new Router({
       beforeEnter: AuthGuard
     },
     {
-      path: '*', 
+      path: '/classifieds',
+      name: 'Classifieds',
+      component: Classifieds
+    },
+    {
+      path: '*',
       redirect: '/'
     }
   ]
