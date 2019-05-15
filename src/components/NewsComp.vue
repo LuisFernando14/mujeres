@@ -8,8 +8,7 @@
           <v-layout pa-2 column fill-height class="lightbox white--text">
           </v-layout>
         </v-img>
-
-        <v-card-title secondary-title>
+        <v-card-title primary-title>
           <div>
             <div class="headline">Dean Taylor Highlights SUNSET® MAP English Cucumbers for Foodservice</div>
  v-       </div>
