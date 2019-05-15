@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <table class="table">
+    <div class="container-fluid">
+      <table class="table">
       <thead class="thead-dark">
         <tr class>
           <th scope="col" colspan="4" class="bg-success">
@@ -27,6 +28,7 @@
         </tr>
       </tbody>
     </table>
+    </div>
     <!---->
   </div>
 </template>
