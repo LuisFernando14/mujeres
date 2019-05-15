@@ -1,18 +1,19 @@
 <template>
   <div>
+    <NewsComp />
     <Weather />
     <NewsComp />
   </div>
 </template>
 
 <script>
+import Weather from '@/components/Weather';
 import NewsComp from '@/components/NewsComp';
-import Weather from '@/components/Weather'
 export default {
   name:'Home',
   components: {
-    NewsComp,
     Weather,
+    NewsComp
   }
 }
 </script>
