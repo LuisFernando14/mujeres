@@ -1,64 +1,67 @@
 <template>
-<div class="login">
-  <v-container>
-    <v-layout row>
-      <v-flex offset-sm3>
-        <v-card>
-          <v-card-text>
-            <v-container>
-              <form @submit.prevent="onSignin">
-                <v-layout row>
-                  <v-flex xs12>
-                    <v-text-field
-                      name="email"
-                      label="Mail"
-                      id="email"
-                      v-model="email"
-                      type="email"
-                      required></v-text-field>
-                  </v-flex>
-                </v-layout>
-                <v-layout row>
-                  <v-flex xs12>
-                    <v-text-field
-                      name="password"
-                      label="Password"
-                      id="password"
-                      v-model="password"
-                      type="password"
-                      required></v-text-field>
-                  </v-flex>
-                </v-layout>
-                <v-layout row>
-                  <v-flex xs12>
-                    <v-btn type="submit">log in</v-btn>
-                  </v-flex>
-                </v-layout>
-              </form>
-            </v-container>
-          </v-card-text>
-        </v-card>
-      </v-flex>
-    </v-layout>
-  </v-container>
-</div>
+    <div id="login">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <div class="card card-signin my-5">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img class="img-fluid" src="https://agrimercante.com/images/layout/logo_banner.png"
+                                     alt="AgriMercnate Logo">
+                            </div>
+                            <br>
+                            <h5 class="card-title text-center">Iniciar sesión</h5>
+                            <form class="form-signin">
+                                <div class="form-label-group">
+                                    <label for="inputEmail">Correo electrónico</label>
+                                    <input type="email" id="inputEmail" class="form-control"
+                                           placeholder="" required autofocus>
+                                </div>
+                                <br>
+                                <div class="form-label-group">
+                                    <label for="inputPassword">Contraseña</label>
+                                    <input type="password" id="inputPassword" class="form-control"
+                                           placeholder="" required>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <label class="custom-control-label" for="customCheck1">Mantener sesión
+                                        iniciada</label>
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                </div>
+                                <button style="background-color: #007b8a; color: white" class="btn btn-lg btn-block"
+                                        type="submit">
+                                    Iniciar sesión
+                                </button>
+                                <hr class="my-4">
+                                <div class="text-center">
+                                    <p>¿Olvidaste tu contraseña?</p>
+                                    <p>¿No tienes cuenta? <a href="#">Regístrate</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        email: '',
-        password: ''
-      }
-    },
-    methods: {
-      onSignin () {
-        this.$store.dispatch('signUserLogin', {email: this.email, password: this.password})
-      },
-      onDismissed () {
-        this.$store.dispatch('clearError')
-      }
+    export default {
+        data() {
+            return {
+                email: '',
+                password: ''
+            }
+        },
+        methods: {
+            onSignin() {
+                this.$store.dispatch('signUserLogin', {email: this.email, password: this.password})
+            },
+            onDismissed() {
+                this.$store.dispatch('clearError')
+            }
+        }
     }
-  }
 </script>
