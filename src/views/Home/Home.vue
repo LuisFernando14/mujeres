@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Weather />
+    <News />
   </div>
 </template>
 
@@ -8,12 +8,14 @@
 import Weather from '@/components/Weather';
 import NewsComp from '@/components/NewsComp';
 import MainNew from '@/components/MainNew';
+import News from '@/components/News';
 export default {
   name:'Home',
   components: {
     Weather,
     NewsComp,
     MainNew,
+    News,
   }
 }
 </script>
