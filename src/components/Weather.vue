@@ -6,17 +6,20 @@
           <h1 class="h1 text-center">Aguacate</h1>
         </div>
         <div class="card-group">
-          <div v-for="card in cards" :key="card.title" class="card text-center">
+          <div v-for="card in cards" :key="card.city" class="card text-center">
             <div class="card-header">
               <h4>{{card.state}}</h4>
             </div>
             <div class="card-body">
               <img v-bind:src="card.src" style="width:80px">
 
-              <h5 class="card-title">{{card.title}}</h5>
+              <h5 class="card-title">{{card.city}}</h5>
               <h1 class="display-4">{{card.grade}}</h1>
             </div>
           </div>
+        </div>
+        <div class="card-footer text-right">
+          <h5 class="text-muted">15 de Mayo del 2019</h5>
         </div>
       </div>
     </div>
@@ -27,28 +30,28 @@ export default {
   data: () => ({
     cards: [
       {
-        title: "Los Mochis",
+        city: "Los Mochis",
         state: "Sinaloa",
         src: "//cdn.apixu.com/weather/64x64/day/116.png",
         flex: 3,
         grade: "27°"
       },
       {
-        title: "La Huacana",
+        city: "La Huacana",
         state: "Michoacán",
         src: "//cdn.apixu.com/weather/64x64/day/299.png",
         flex: 3,
         grade: "20°"
       },
       {
-        title: "AltaMirano",
+        city: "AltaMirano",
         state: "Chiapas",
         src: "//cdn.apixu.com/weather/64x64/day/122.png",
         flex: 3,
         grade: "16°"
       },
       {
-        title: "Obregón",
+        city: "Obregón",
         state: "Sonora",
         src: "//cdn.apixu.com/weather/64x64/day/113.png",
         flex: 3,
