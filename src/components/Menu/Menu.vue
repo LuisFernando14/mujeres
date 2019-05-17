@@ -6,9 +6,9 @@
       </nav>
     </div>
     <nav class="navbar navbar-light bg-light ">
-      <div class="container-fluid">
+      <div class="container-fluid" >
         <div class="row">
-          <div class="col">
+          <div class="col" v-show="$store.getters.user">
             <div
               ref="bmBurgerButton"
               class="bm-burger-button"
@@ -27,8 +27,10 @@
             <a class="navbar-brand" href="#">
               <img src="./../../assets/logo_banner.png" style="margin-left: 30px;" width="250px">
             </a>
+            <div  class="float-right">
+            <button type="button" class="">Registrate</button>
+            </div>
           </div>
-          <div class="col"></div>
         </div>
       </div>
     </nav>
