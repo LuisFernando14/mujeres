@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <Navigation />
+    <Navigation v-show="$store.getters.user"/>
     <router-view/>
     <Footer />
   </v-app>
@@ -11,19 +11,9 @@
 import Navigation from './components/Menu/MenuBar';
 import Footer from './components/Footer';
 export default {
-  name: 'App',
-  data () {
-    return {
-      //
-    }
-  },
   components: {
     Navigation,
     Footer
   }
 }
 </script>
-
-<style>
-
-</style>
