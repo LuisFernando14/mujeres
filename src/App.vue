@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <Navigation />
+    <Navigation v-show="$store.getters.user"/>
     <router-view/>
   </v-app>
 </template>
@@ -8,19 +8,10 @@
 <script>
 
 import Navigation from './components/Menu/MenuBar';
+import {store} from'./store/index';
 export default {
-  name: 'App',
-  data () {
-    return {
-      //
-    }
-  },
   components: {
     Navigation
   }
 }
 </script>
-
-<style>
-
-</style>
