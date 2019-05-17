@@ -12,7 +12,7 @@
             <div class="card-body">
               
 
-              <h5 class="card-title display-4">$28.80</h5>
+              <h5 class="card-title display-4">$28.80 MXN</h5>
               
               <div class="row">
                 <div class="col"><img class="" src="https://img.icons8.com/color/50/000000/avocado.png" ></div>
@@ -25,7 +25,7 @@
             <div class="card-header h4">Estados Unidos</div>
             <div class="card-body">
               
-              <h5 class="card-title display-4">$90.09</h5>
+              <h5 class="card-title display-4">$90.09 USD</h5>
               <div class="row">
                 <div class="col"><img src="https://img.icons8.com/color/50/000000/avocado.png"></div>
                 <div class="col"><img  src="http://simpleicon.com/wp-content/uploads/bar-chart-down-2.png" style="width:15%" alt=""></div>
