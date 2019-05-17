@@ -23,13 +23,13 @@
               ></span>
             </div>
           </div>
-          <div class="col">
+          <div class="col" style="">
             <a class="navbar-brand" href="#">
               <img src="./../../assets/logo_banner.png" style="margin-left: 30px;" width="250px">
             </a>
-            <div  class="float-right">
-            <button type="button" class="">Registrate</button>
-            </div>
+          </div>
+          <div class="my-2 my-md-0 mr-md-3">
+            <button type="button" class="btn btn-success flexbox">Registrate</button>
           </div>
         </div>
       </div>
