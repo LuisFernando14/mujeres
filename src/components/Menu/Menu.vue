@@ -11,15 +11,12 @@
       <div class="row">
         <div class="col">
           <div ref="bmBurgerButton" class="bm-burger-button" @click="openMenu" :class="{ hidden: !burgerIcon }">
-            <i class="material-icons" width="200" style="left: 36px;
-      top: 36px;">
-            view_headline
-            </i>
+            <span class="bm-burger-bars line-style" :style="{top:10 * (index * 2) + '%'}" v-for="(x, index) in 3" :key="index"></span>
           </div>
         </div>
         <div class="col">
       <a class="navbar-brand" href="#">
-        <img src="./../../assets/logo_banner.png" width="200" style="" alt="">
+        <img src="./../../assets/logo_banner.png" width="250px" style="" alt="">
       </a>
         </div>
         <div class="col">
@@ -202,10 +199,11 @@
       height: 100%;
     }
     .bm-burger-button {
-      width: 36px;
-      height: 30px;
-      left: 36px;
-      top: 36px;
+      position: absolute; 
+      width: 35px;
+      height: 55px;
+      left: 9px;
+      top: 10px;
       cursor: pointer;
     }
     .bm-burger-button.hidden {
@@ -216,7 +214,7 @@
     }
     .line-style {
       position: absolute;
-      height: 20%;
+      height: 10%;
       left: 0;
       right: 0;
     }
