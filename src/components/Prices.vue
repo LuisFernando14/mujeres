@@ -2,7 +2,10 @@
 
   <div class="container">
     <div class="container-fluid">
-      <div class="card">
+      <div class="card ">
+        <div class="card-header ">
+          <h1 class="h4 ">Precios</h1>
+        </div>
         <div class="card-header bg-secondary text-white">
           <h1 class="h4 text-center">Aguacate</h1>
         </div>
