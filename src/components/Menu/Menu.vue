@@ -17,7 +17,7 @@
             >
               <span
                 class="bm-burger-bars line-style"
-                :style="{top:10 * (index * 2) + '%'}"
+                :style="{top:7 * (index * 3) + '%'}"
                 v-for="(x, index) in 3"
                 :key="index"
               ></span>
@@ -25,7 +25,7 @@
           </div>
           <div class="col">
             <a class="navbar-brand" href="#">
-              <img src="./../../assets/logo_banner.png" width="250px" style alt>
+              <img src="./../../assets/logo_banner.png" style="margin-left: 30px;" width="250px">
             </a>
           </div>
           <div class="col"></div>
@@ -208,7 +208,7 @@ html {
   position: absolute;
   width: 35px;
   height: 55px;
-  left: 9px;
+  left: 10px;
   top: 10px;
   cursor: pointer;
 }
@@ -220,7 +220,7 @@ html {
 }
 .line-style {
   position: absolute;
-  height: 10%;
+  height: 8%;
   left: 0;
   right: 0;
 }
