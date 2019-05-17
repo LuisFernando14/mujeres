@@ -7,7 +7,7 @@
 
     </div>
   <nav class="navbar navbar-light bg-light">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col">
           <div ref="bmBurgerButton" class="bm-burger-button" @click="openMenu" :class="{ hidden: !burgerIcon }">
