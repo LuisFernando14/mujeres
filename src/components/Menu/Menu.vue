@@ -5,7 +5,7 @@
         <slot></slot>
       </nav>
     </div>
-    <nav class="navbar navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-light bg-light ">
       <div class="container-fluid">
         <div class="row">
           <div class="col">
