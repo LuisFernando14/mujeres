@@ -6,9 +6,7 @@
     <News />
     <br>
     <Weather />
-    <br>
-    <br><br><br>
-    <Footer />
+    
 
   </div>
 </template>
