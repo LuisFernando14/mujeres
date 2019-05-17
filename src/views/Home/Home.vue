@@ -1,9 +1,12 @@
 <template>
   <div>
     <MegaNoticia />
+    <br>
+    <br>
     <News />
-    
+    <br>
     <Weather />
+    <br>
     <br><br><br>
     <Footer />
 

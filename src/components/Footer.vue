@@ -39,9 +39,7 @@
     </div>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
+    
   </footer>
 </template>
 <script>
