@@ -42,7 +42,9 @@
                                     </div>
                                 </div>
                                 <div class="text-right">
-                                    <button style="background-color: #f7b334; color: white" type="button" class="btn btn-lg">Registrarse</button>
+                                    <button style="background-color: #f7b334; color: white" type="button"
+                                            class="btn btn-lg">Registrarse
+                                    </button>
                                 </div>
                             </form>
                         </div>
