@@ -28,7 +28,7 @@ let router = new Router({
       beforeEnter: AuthGuard
     },
     {
-      path: '/classifieds',
+      path: '/classifieds/add',
       name: 'Classifieds',
       component: Classifieds
     },

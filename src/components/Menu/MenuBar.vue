@@ -3,27 +3,27 @@
     <component :is="'slide'">
       <a href="#">
         <i class="fa fa-fw fa-star-o"></i>
-        <span>Favourites</span>
+        <span>Noticias</span>
       </a>
       <a href="#">
         <i class="fa fa-fw fa-bell-o"></i>
-        <span>Alerts</span>
+        <span>Clima</span>
       </a>
       <a href="#">
         <i class="fa fa-fw fa-envelope-o"></i>
-        <span>Messages</span>
+        <span>Precios</span>
       </a>
       <a href="#">
         <i class="fa fa-fw fa-comment-o"></i>
-        <span>Comments</span>
+        <span>Clasificados</span>
       </a>
       <a href="#">
         <i class="fa fa-fw fa-bar-chart-o"></i>
-        <span>Analytics</span>
+        <span>Empresas</span>
       </a>
       <a href="#">
         <i class="fa fa-fw fa-newspaper-o"></i>
-        <span>Reading</span>
+        <span>Productos</span>
       </a>
     </component>
   </div>
