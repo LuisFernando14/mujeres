@@ -1,9 +1,9 @@
 <template>
-  <div class="container">
-    <div class="container-fluid">
+  <div class="container ">
+    <div class="container-fluid border-dark">
       <!---->
 
-      <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
+      <div id="carouselExampleControls" class="carousel slide " data-interval="false" data-ride="carousel">
         <div class="carousel-inner">
 
         <div  class="carousel-item active">
@@ -18,17 +18,22 @@
           
           
         </div>
+        
         <a
-          class="carousel-control-prev"
+          style="border-radius:500px;width:50px;height:50px; margin-top:20%;"
+          class="carousel-control-prev bg-info align-self-center mr-3"
+          
           href="#carouselExampleControls"
           role="button"
           data-slide="prev"
         >
-          <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+        
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only ">Previous</span>
         </a>
         <a
-          class="carousel-control-next"
+          style="border-radius:500px;width:50px;height:50px; margin-top:20%;"
+          class="carousel-control-next bg-info"
           href="#carouselExampleControls"
           role="button"
           data-slide="next"
@@ -121,4 +126,5 @@ export default {
 };
 </script>
 <style >
+
 </style>
