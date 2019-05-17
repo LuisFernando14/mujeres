@@ -1,5 +1,5 @@
 import './classifieds.css'
-import Places from "google-places-web";
+// import Places from "google-places-web";
 
 export default {
     name: 'Classifieds',
@@ -28,17 +28,40 @@ export default {
     },
     data() {
         return {
-            searchTerm: 'Hola'
+            sortType: 'dSrPdTjT5DDFX5g4P',
+            subCat: '',
+            searchTerm: 'Hola',
+            categories: [
+                { value: 'dSrPdTjT5DDFX5g4P', text: 'Maquinaria e implementos', },
+                { value: '6myFQhzMEpS94dNSA', text: 'Partes de maquinaria e implementos'},
+                { value: 'BS6fZWX92HqHqwgXA', text: 'Equipamiento' },
+                { value: 'wdwpvber4QZi8dwKd', text: 'Transporte'},
+                { value: 'QTYffMmMkEPPspJWz', text: 'Campos y empaques'},
+                { value: 'SXEBvnu66pE9FxNs6', text: 'Insumos'},
+                { value: 'vt5sza4RwzvSBas8s', text: 'Servicios'},
+            ],
+            subcategories: [
+                { value: 'dSrPdTjT5DDFX5g4P', text: 'Campos', },
+                { value: '6myFQhzMEpS94dNSA', text: 'Empaques'},
+                { value: 'BS6fZWX92HqHqwgXA', text: 'Huertas' },
+                { value: 'wdwpvber4QZi8dwKd', text: 'Motores'},
+                { value: 'QTYffMmMkEPPspJWz', text: 'Tanques'},
+                { value: 'SXEBvnu66pE9FxNs6', text: 'Bombas'},
+                { value: 'vt5sza4RwzvSBas8s', text: 'Riego'},
+            ]
         }
     },
-    computed: {
-    },
+    computed: {},
     methods: {
-        activatePlacesSearch() {
-            // let input = '';
-            let autocomplete = new google.maps.places.Autocomplete(this.searchTerm);
-            console.log(autocomplete);
+        hazAlgo () {
+            console.log('haciendoa lgo')
         },
+        setCat(catKey) {
+            console.log(catKey)
+        },
+        setSub(subKey) {
+            console.log(subKey)
+        }
     }
 }
 
