@@ -1,22 +1,28 @@
 <template>
   <div>
     <MegaNoticia />
+    <News />
+    
     <Weather />
+    <br><br><br>
+    <Footer />
+
   </div>
 </template>
 
 <script>
 import Weather from '@/components/Weather';
-import NewsComp from '@/components/NewsComp';
-import MainNew from '@/components/MainNew';
 import MegaNoticia from '@/components/MegaNoticia';
+import News from '@/components/News';
+import Footer from '@/components/Footer';
+
 export default {
   name:'Home',
   components: {
     Weather,
-    NewsComp,
-    MainNew,
-    MegaNoticia
+    MegaNoticia,
+    News,
+    Footer
   }
 }
 </script>
