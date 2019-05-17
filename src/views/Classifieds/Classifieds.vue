@@ -42,20 +42,14 @@
                     </div>
                 </div>
                 <h5>¿Dónde?</h5>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="inputAddress">País</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    <div class="form-group">
+                        <label for="search_term">Seleccione un lugar</label>
+                        <input ref="autocomplete"
+                               placeholder="Buscar ubicación"
+                               class="search-location form-control"
+                               id="search_term"
+                               type="text"/>
                     </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputAddress23">Estado</label>
-                        <input type="text" class="form-control" id="inputAddress23" placeholder="Apartment, studio, or floor">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputAddress4">Ciudad</label>
-                        <input type="text" class="form-control" id="inputAddress4" placeholder="Apartment, studio, or floor">
-                    </div>
-                </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputCity">City</label>
@@ -86,4 +80,6 @@
         </div>
     </div>
 </template>
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGt8m-i1MPxjJt2E5zn1EulptxJiYHwaI&libraries=places"></script>
 <script src="./classifieds.js"></script>
