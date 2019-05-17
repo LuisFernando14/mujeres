@@ -3,11 +3,13 @@
     <div class="container-fluid">
       <div class="card">
         <div class="row">
-          <div class="col-6 col-md-4">
-            <a class="ui red ribbon label texto-encima centrado">Lo mas Le&iacute;do</a>
-            <img :src="news.img" width="350" height="220" class="rounded-lg" style="width: 350px; height: 220px; object-fit: cover; object-position: center;">
+          <div class="col-6 col-md-4" style="margin-top: 0; padding-top: 0">
+            <img :src="news.img" width="350" class="rounded-lg" style="width: 350px; height: 220px; object-fit: cover; object-position: center; margin-top: 0; padding-top: 0">
           </div>
-          <div class="col-12 col-md-8" style="top: 36px;">
+          <div class="col-12 col-md-8">
+            <div class="text-right" style="padding-top: 1em">
+              <span style="padding-right: 2em; background-color: yellow; font-size: 1.5em; border-radius: 8px" class="text-right">Lo más leído</span>
+            </div>
             <h2>{{news.title}}</h2>
             <p style="top: 12px;">{{news.shortBody}}</p>
           </div>

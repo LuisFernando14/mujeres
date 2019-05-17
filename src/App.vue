@@ -1,9 +1,9 @@
 <template>
-  <v-app>
+  <div id="app">
     <Navigation v-show="$store.getters.user"/>
     <router-view/>
     <Footer />
-  </v-app>
+  </div>
 </template>
 
 <script>

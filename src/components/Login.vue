@@ -11,34 +11,33 @@
                             </div>
                             <br>
                             <h5 class="card-title text-center">Iniciar sesión</h5>
-                            <form class="form-signin">
-                                <div class="form-label-group">
-                                    <label for="inputEmail">Correo electrónico</label>
-                                    <input type="email" id="inputEmail" class="form-control"
-                                           placeholder="" required autofocus>
+
+                            <div id="loginForm">
+                                <div class="form-group">
+                                    <input autofocus type="email" name="Email" class="form-control" id="Email" v-model="user.Email"
+                                           placeholder="Correo electrónico">
                                 </div>
-                                <br>
-                                <div class="form-label-group">
-                                    <label for="inputPassword">Contraseña</label>
-                                    <input type="password" id="inputPassword" class="form-control"
-                                           placeholder="" required>
+                                <div class="form-group">
+                                    <input type="password" name="Password" class="form-control" id="Password" v-model="user.Password"
+                                           placeholder="Contraseña">
                                 </div>
-                                <br>
-                                <div class="custom-control custom-checkbox mb-3">
-                                    <label class="custom-control-label" for="customCheck1">Mantener sesión
-                                        iniciada</label>
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+
+                                <div class="checkbox mb-3">
+                                    <label>
+                                        <input type="checkbox" value="remember-me"> Mantener sesión iniciada
+                                    </label>
                                 </div>
-                                <button style="background-color: #007b8a; color: white" class="btn btn-lg btn-block"
-                                        type="submit">
-                                    Iniciar sesión
-                                </button>
-                                <hr class="my-4">
-                                <div class="text-center">
-                                    <p>¿Olvidaste tu contraseña?</p>
-                                    <p>¿No tienes cuenta? <a href="#">Regístrate</a></p>
+                                <div class="form-group">
+                                    <input type="button" id="btnLogin" class="form-control btn btn-lg btn-info" value="Iniciar sesión"
+                                           @click="iniciarSesion">
                                 </div>
-                            </form>
+                            </div>
+                            <hr class="my-4">
+                            <div class="text-center">
+                                <p>¿Olvidaste tu contraseña?</p>
+                                <p>¿No tienes cuenta? <a href="#">Regístrate</a></p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -49,15 +48,25 @@
 
 <script>
     export default {
+        name: 'login',
         data() {
             return {
-                email: '',
-                password: ''
+                user: {
+                    Email: '',
+                    Password: ''
+                }
             }
         },
+        mounted() {
+            console.log('montado');
+        },
         methods: {
-            onSignin() {
-                this.$store.dispatch('signUserLogin', {email: this.email, password: this.password})
+            iniciarSesion() {
+                this.$http.post('auth/login', this.user).then(res => {
+                    // console.log(res.data.tokenHash);
+                    const token = res.data.tokenHash;
+                    localStorage.setItem('token', token)
+                })
             },
             onDismissed() {
                 this.$store.dispatch('clearError')

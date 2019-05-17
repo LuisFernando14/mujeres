@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state: {
-    user: true
+    user: localStorage.getItem('token')
   },
   mutations: {
     setUser (state, payload) {
@@ -41,6 +41,6 @@ export const store = new Vuex.Store({
   getters: {
     user (state) {
       return state.user
-    } 
+    }
   }
 })
