@@ -3,6 +3,8 @@
     <div class="container-fluid">
       <!---->
       <div class="card-deck card bg-light" style="padding-top:2%;padding-bottom:2%">
+        
+        
         <div v-for="card in new1" :key="card.city" class="card border-light ">
           <img v-bind:src="card.img" class="card-img-top" alt="..." style="width:200px;height:150px">
           <div class="card-body">
