@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" >
     <component :is="'slide'">
       <a href="#">
         <i class="fa fa-fw fa-star-o"></i>
