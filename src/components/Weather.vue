@@ -33,7 +33,7 @@ export default {
         flex: 3,
         grade: "32°"
       },
-     
+
       {
         city: "Morelia",
         state: "Michoacán",
@@ -41,21 +41,21 @@ export default {
         flex: 3,
         grade: "20°"
       },
-       {
+      {
         city: "Uruapan",
         state: "Michoacán",
         src: "//cdn.apixu.com/weather/64x64/day/116.png",
         flex: 3,
         grade: "27°"
       },
-      
+
       {
         city: "Zamora",
         state: "Michoacán",
         src: "//cdn.apixu.com/weather/64x64/day/122.png",
         flex: 3,
         grade: "16°"
-      },
+      }
     ]
   })
 };

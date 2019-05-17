@@ -6,6 +6,8 @@
     <News />
     <br>
     <Weather />
+    <br>
+    <Prices />
     <br><br><br>
     
 
@@ -16,7 +18,7 @@
 import Weather from '@/components/Weather';
 import MegaNoticia from '@/components/MegaNoticia';
 import News from '@/components/News';
-import Footer from '@/components/Footer';
+import Prices from '@/components/Prices';
 
 export default {
   name:'Home',
@@ -24,7 +26,7 @@ export default {
     Weather,
     MegaNoticia,
     News,
-    Footer
+    Prices
   }
 }
 </script>

@@ -13,11 +13,6 @@
             </p>
             
           </div>
-          <!--
-          <div class="card-footer text-right">
-            <a href="#" class="card-link ">Modal</a>
-          </div>
-          -->
           
         </div>
       </div>
