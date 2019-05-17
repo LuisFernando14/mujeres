@@ -6,6 +6,7 @@
     <News />
     <br>
     <Weather />
+    <br><br><br>
     
 
   </div>
