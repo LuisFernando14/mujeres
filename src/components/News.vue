@@ -54,67 +54,67 @@ export default {
       new1:[
           {
             title:"Mouse negro",
-            date:"16 de Mayo",
-            body:"Well, the wre going to mrograms. S ",
+            date:"17 de Mayo",
+            body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
           },
           {
             title:"Mouse blanco",
-            date:"16 de Mayo",
-            body:"The path of the rie of charity andnd the finder of.",
+            date:"17 de Mayo",
+            body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
           },
           {
             title:"Mouse gris",
-            date:"16 de Mayo",
-            body:"Your bones don't break, I dt, we choke. We get sosite ends.",
+            date:"17 de Mayo",
+            body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
           },
           {
             title:"Mouse obscuro",
-            date:"16 de Mayo",
-            body:"You thinnce and got seven o man.",
+            date:"17 de Mayo",
+            body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
           }
       ],
       new2:[
           {
             title:"Mouse rojo",
-            date:"16 de Mayo",
-            body:"You think water .",
+            date:"17 de Mayo",
+            body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
           },
           {
             title:"Mouse amarillo",
-            date:"16 de Mayo",
-            body:"that killed the other two, but it wasn't. Nandle to man.",
+            date:"17 de Mayo",
+            body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
           },
           {
             title:"Mouse Naranja",
-            date:"16 de Mayo",
-            body:"Now that there is the TecDo you thamerican crime. Like thehat shit. ",
+            date:"17 de Mayo",
+            body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
           },
           {
             title:"Mouse amarojo",
-            date:"16 de Mayo",
-            body:"Now that we know who times tss.",
+            date:"17 de Mayo",
+            body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
           }
       ],
       new3:[
           {
             title:"Mouse morado",
             date:"16 de Mayo",
-            body:"You think water movknows it killeded on eachman.",
+            body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
           },
           {
             title:"Mouse lila",
             date:"16 de Mayo",
-            body:"Now that we know who you are and me! I should've known wlass.",
+            body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
           },
           {
             title:"Mouse rosita",
             date:"16 de Mayo",
-            body:"Now that there is the Tec-9,  it: the most popular gun in American crime. ",
+            body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
           },
           {
             title:"Mouse purpura",
             date:"16 de Mayo",
-            body:"Now that there is the Tec-9,  is advertised as t. ",
+            body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
           }
       ]
       

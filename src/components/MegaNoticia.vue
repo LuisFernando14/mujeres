@@ -1,18 +1,20 @@
 <template>
-<div class="container">
-  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-  <div class="row">
-    <div class="col-6 col-md-4">
-    <a class="ui red ribbon label">Overview</a>
-      <img :src="news.img" width="350" height="350">
-    </div>
-    <div class="col-12 col-md-8" style="top: 36px;">
-      <h2>{{news.title}}</h2>
-      <p style="top: 12px;">{{news.shortBody}}</p>
-        <h4 class="primary">Lo mas leido </h4>
+  <div class="container">
+    <div class="container-fluid">
+      <div class="card">
+        <div class="row">
+          <div class="col-6 col-md-4">
+            <a class="ui red ribbon label texto-encima centrado">Lo mas Le&iacute;do</a>
+            <img :src="news.img" width="350" height="220" class="rounded-lg" style="width: 350px; height: 220px; object-fit: cover; object-position: center;">
+          </div>
+          <div class="col-12 col-md-8" style="top: 36px;">
+            <h2>{{news.title}}</h2>
+            <p style="top: 12px;">{{news.shortBody}}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -31,24 +33,48 @@ export default {
 </script>
 
 <style>
+.ui.red.labels .label:hover, a.ui.red.label:hover {
+    background-color: #d01919!important;
+    border-color: #d01919!important;
+    color: #fff!important;
+}
+.ui.red.ribbon.label {
+    border-color: #b21e1e!important;
+}
+a.ui.label:hover, a.ui.labels .label:hover {
+    background-color: #e0e0e0;
+    border-color: #e0e0e0;
+    background-image: none;
+    color: rgba(0,0,0,.8);
+}
+.ui.red.label, .ui.red.labels .label {
+    background-color: #db2828!important;
+    border-color: #db2828!important;
+    color: #fff!important;
+}
 .ui.ribbon.label {
     left: calc(-1rem - 1.2em);
     margin-right: -1.2em;
     padding-left: calc(1rem + 1.2em);
     padding-right: 1.2em;
 }
-.ui.ribbon.label:after {
-    position: absolute;
-    content: '';
-    top: 100%;
-    left: 0;
-    background-color: transparent!important;
-    border-style: solid;
-    border-width: 0 1.2em 1.2em 0;
-    border-color: transparent;
-    border-right-color: inherit;
-    width: 0;
-    height: 0;
+.ui.ribbon.label {
+    position: relative;
+    margin: 0;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content;
+    border-radius: 0 .28571429rem .28571429rem 0;
+    border-color: rgba(0,0,0,.15);
+}
+.ui.label:first-child {
+    margin-left: 0;
+}
+a.ui.label {
+    cursor: pointer;
+}
+.ui.label, .ui.labels .label {
+    font-size: .85714286rem;
 }
 .ui.label {
     display: inline-block;
@@ -66,21 +92,43 @@ export default {
     -webkit-transition: background .1s ease;
     transition: background .1s ease;
 }
-.ui.ribbon.label {
-    position: relative;
-    /* margin: 0; */
-    min-width: -webkit-max-content;
-    min-width: -moz-max-content;
-    min-width: max-content;
-    border-radius: 0 .28571429rem .28571429rem 0;
-    border-color: rgba(0,0,0,.15);
+.ui.segment, .ui.segments .segment {
+    font-size: 1rem;
+}.ui.grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    padding: 0;
 }
-.ui.red.label, .ui.red.labels .label {
-    background-color: #db2828!important;
-    border-color: #db2828!important;
-    color: #fff!important;
+.ui.labels a.label:hover:before, a.ui.label:hover:before {
+    color: rgba(0,0,0,.8);
 }
-.ui.red.ribbon.label {
-    border-color: #b21e1e!important;
+.ui.ribbon.label:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    background-color: transparent!important;
+    border-style: solid;
+    border-width: 0 1.2em 1.2em 0;
+    border-color: transparent;
+    border-right-color: inherit;
+    width: 0;
+    height: 0;
+}
+.centrado{
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    transform: translate(12%, 0%);
 }
 </style>
