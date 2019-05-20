@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <Navigation v-show="$store.getters.user"/>
     <Navigation/>
     <router-view/>
     <Footer />
