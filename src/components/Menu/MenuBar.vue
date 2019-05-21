@@ -1,14 +1,41 @@
 <template>
-      <sidebar-menu
-        :menu="menu"
-        :collapsed="collapsed"
-        :show-one-child="true"
-        @collapse="onCollapse"
-        @itemClick="onItemClick"
-      />
+<div>
+  <header>
+    <label class="lnr lnr-menu" v-on:click="onItemClick"></label>
+  </header>
+
+  <div class="d-none d-sm-block">
+    <div class="menu">
+        <div class="line"><label class="lnr lnr-home"><font>Inicio</font></label></div>
+        <div class="line"><label class="lnr lnr-music-note"><font>Musicas</font></label></div>
+        <div class="line"><label class="lnr lnr-envelope"><font>Correos</font></label></div>
+        <div class="line"><label class="lnr lnr-picture"><font>Galeria</font></label></div>
+        <div class="line"><label class="lnr lnr-film-play"><font>Videos</font></label></div>
+        <div class="line"><label class="lnr lnr-license"><font>Licensia</font></label></div>
+        <div class="line"><label class="lnr lnr-phone"><font>Telefono</font></label></div>
+        <div class="line"><label class="lnr lnr-location"><font>Localizacion</font></label></div>
+        <div class="line"><label class="lnr lnr-users"><font>Contactos</font></label></div>
+    </div>
+  </div>
+  <div class="d-sm-none">
+    <div class="menu-Mobil">
+        <div class="line"><label class="lnr lnr-home"><font>Inicio</font></label></div>
+        <div class="line"><label class="lnr lnr-music-note"><font>Musicas</font></label></div>
+        <div class="line"><label class="lnr lnr-envelope"><font>Correos</font></label></div>
+        <div class="line"><label class="lnr lnr-picture"><font>Galeria</font></label></div>
+        <div class="line"><label class="lnr lnr-film-play"><font>Videos</font></label></div>
+        <div class="line"><label class="lnr lnr-license"><font>Licensia</font></label></div>
+        <div class="line"><label class="lnr lnr-phone"><font>Telefono</font></label></div>
+        <div class="line"><label class="lnr lnr-location"><font>Localizacion</font></label></div>
+        <div class="line"><label class="lnr lnr-users"><font>Contactos</font></label></div>
+    </div>
+  </div>
+
+</div>
 </template>
  
 <script>
+const $ = require('jquery')
 const separator = {
   template: `<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">`
 }
@@ -18,121 +45,32 @@ const separator = {
     return {
       menu: [
         {
-          header: true,
-          title: 'Getting Started'
-        },
-        {
-          href: '/',
-          title: 'Installation',
-          icon: 'fa fa-download'
-        },
-        {
-          href: '/basic-usage',
-          title: 'Basic Usage',
+          href: '/Noticias',
+          title: 'Noticias',
           icon: 'fa fa-code'
         },
         {
-          header: true,
-          title: 'Usage'
-        },
-        {
-          href: '/props',
-          title: 'Props',
+          href: '/Precios',
+          title: 'Precios',
           icon: 'fa fa-cogs'
         },
         {
-          href: '/events',
-          title: 'Events',
+          href: '/CLima',
+          title: 'Clima',
           icon: 'fa fa-bell'
         },
         {
-          href: '/styling',
-          title: 'Styling',
+          href: '/Clasificados',
+          title: 'Clasificados',
           icon: 'fa fa-palette'
         },
         {
           header: true,
           component: separator,
           visibleOnCollapse: true
-        },
-        {
-          header: true,
-          title: 'Example'
-        },
-        {
-          href: '/disabled',
-          title: 'Disabled page',
-          icon: 'fa fa-lock',
-          disabled: true
-        },
-        {
-          title: 'Badge',
-          icon: 'fa fa-cog',
-          badge: {
-            text: 'new',
-            class: 'badge-danger'
-          }
-        },
-        {
-          href: '/page',
-          title: 'Dropdown Page',
-          icon: 'fa fa-list-ul',
-          child: [
-            {
-              href: '/page/sub-page-1',
-              title: 'Sub Page 01',
-              icon: 'fa fa-file-alt'
-            },
-            {
-              href: '/page/sub-page-2',
-              title: 'Sub Page 02',
-              icon: 'fa fa-file-alt'
-            }
-          ]
-        },
-        {
-          title: 'Multiple Level',
-          icon: 'fa fa-list-alt',
-          child: [
-            {
-              title: 'page'
-            },
-            {
-              title: 'Level 2 ',
-              child: [
-                {
-                  title: 'page'
-                },
-                {
-                  title: 'Page'
-                }
-              ]
-            },
-            {
-              title: 'Page'
-            },
-            {
-              title: 'Another Level 2',
-              child: [
-                {
-                  title: 'Level 3',
-                  child: [
-                    {
-                      title: 'Page'
-                    },
-                    {
-                      title: 'Page'
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       collapsed: true,
-      themes: ['', 'white-theme'],
-      selectedTheme: 'white-theme'
     }
   },
   methods: {
@@ -142,50 +80,137 @@ const separator = {
     },
     onItemClick (event, item) {
       console.log('onItemClick')
-      // console.log(event)
-      // console.log(item)
+    $('.menu').toggleClass("menu-show");
+    $('.menu-Mobil').toggleClass("menu-show-mobil");
     }
   }
 }
 </script> 
 <style>
-
-body,
-html {
-  margin: 0;
-  padding: 0;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: #f2f4f7;
+header{
+    width: 100%;
+    height: 50px;
+    background: #16ac43;
+    position: fixed;
+    z-index: 10;
 }
 
-#demo {
-  padding-left: 350px;
-}
-#demo.collapsed {
-  padding-left: 50px;
-}
-
-.demo {
-  padding: 50px;
-}
-
-.badge-danger {
-  background-color: #ff2a2a;
-  color: #fff;
+.lnr-menu{
+    font-size: 30px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    color: white;
+    border: 1px solid transparent;
+    transition: all 300ms;
+    padding: 2px;
+    cursor: pointer;
 }
 
-.container {
-  max-width: 600px;
+.lnr-menu:hover{
+    border: 1px solid white;
 }
 
-pre {
-  color: #2a2a2e;
-  background: #fff;
-  border-radius: 2px;
-  padding: 10px;
-  overflow: auto;
+
+
+
+
+
+/*Menu*/
+
+
+.menu{
+    width: 60px;
+    height: 100vh;
+    background: #363636;
+    overflow: hidden;
+    position: fixed;
+    top: 50px;
+    transition: all 300ms;
+    z-index: 9;
+    overflow: auto;
 }
+.menu-Mobil{
+    width: 60px;
+    height: 100vh;
+    background: #363636;
+    overflow: hidden;
+    position: fixed;
+    top: 50px;
+    transition: all 300ms;
+    z-index: 9;
+    overflow: auto;
+}
+.menu-show-mobil{
+    width: 0px;
+}
+.menu-show{
+    width: 240px;
+}
+
+.line{
+    margin-top: 10px;
+    padding: 10px;
+    transition: all 300ms;
+}
+
+
+.line:hover{
+    background: #188fe6; 
+    cursor: pointer;
+}
+.line label{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.line font{
+    margin-left: 40px;
+    font-size: 18px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+
+/*Articulo*/
+
+
+main{
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    padding: 20px;
+    transition: all 300ms;
+}
+
+.main-move{
+    left: 240px;
+}
+
+article h1{
+    font-size: 40px;
+}
+
+article p{
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+
+
 </style>
