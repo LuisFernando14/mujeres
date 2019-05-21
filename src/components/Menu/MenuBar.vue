@@ -1,33 +1,36 @@
 <template>
 <div>
   <header>
+<div class="d-flex">
+  <div class="mr-auto">
     <label class="lnr lnr-menu" v-on:click="onItemClick"></label>
+    <img src="./../../assets/logo_banner.png" alt="Agrimercante.com" width="190" style="margin-left: 10px;">
+
+  </div>
+  <div class="p-2">
+    <button type="button" class="btn btn-secondary">Registrate</button>
+    
+  </div>
+</div>
+
   </header>
 
   <div class="d-none d-sm-block">
     <div class="menu">
         <div class="line"><label class="lnr lnr-home"><font>Inicio</font></label></div>
-        <div class="line"><label class="lnr lnr-music-note"><font>Musicas</font></label></div>
-        <div class="line"><label class="lnr lnr-envelope"><font>Correos</font></label></div>
-        <div class="line"><label class="lnr lnr-picture"><font>Galeria</font></label></div>
-        <div class="line"><label class="lnr lnr-film-play"><font>Videos</font></label></div>
-        <div class="line"><label class="lnr lnr-license"><font>Licensia</font></label></div>
-        <div class="line"><label class="lnr lnr-phone"><font>Telefono</font></label></div>
-        <div class="line"><label class="lnr lnr-location"><font>Localizacion</font></label></div>
-        <div class="line"><label class="lnr lnr-users"><font>Contactos</font></label></div>
+        <div class="line"><label class="lnr lnr-music-note"><font>Noticias</font></label></div>
+        <div class="line"><label class="lnr lnr-calendar-full"><font>Eventos</font></label></div>
+        <div class="line"><label class="lnr lnr-chart-bars"><font>Precios</font></label></div>
+        <div class="line"><label class="lnr lnr-cloud"><font>climas</font></label></div>
     </div>
   </div>
   <div class="d-sm-none">
-    <div class="menu-Mobil">
+    <div class="menu-Mobil menu-show-mobil">
         <div class="line"><label class="lnr lnr-home"><font>Inicio</font></label></div>
-        <div class="line"><label class="lnr lnr-music-note"><font>Musicas</font></label></div>
-        <div class="line"><label class="lnr lnr-envelope"><font>Correos</font></label></div>
-        <div class="line"><label class="lnr lnr-picture"><font>Galeria</font></label></div>
-        <div class="line"><label class="lnr lnr-film-play"><font>Videos</font></label></div>
-        <div class="line"><label class="lnr lnr-license"><font>Licensia</font></label></div>
-        <div class="line"><label class="lnr lnr-phone"><font>Telefono</font></label></div>
-        <div class="line"><label class="lnr lnr-location"><font>Localizacion</font></label></div>
-        <div class="line"><label class="lnr lnr-users"><font>Contactos</font></label></div>
+        <div class="line"><label class="lnr lnr-briefcase"><font>Noticias</font></label></div>
+        <div class="line"><label class="lnr lnr-calendar-full"><font>Eventos</font></label></div>
+        <div class="line"><label class="lnr lnr-chart-bars"><font>Precios</font></label></div>
+        <div class="line"><label class="lnr lnr-cloud"><font>climas</font></label></div>
     </div>
   </div>
 
@@ -97,7 +100,7 @@ const separator = {
 header{
     width: 100%;
     height: 50px;
-    background: #16ac43;
+    background: #000000;
     position: fixed;
     z-index: 10;
 }
