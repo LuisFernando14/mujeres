@@ -1,5 +1,6 @@
 <template>
   <div class="bg-light">
+    <br>
     <MegaNoticia />
     <br>
     <br>
