@@ -16,7 +16,7 @@
   </header>
 
   <div class="d-none d-sm-block">
-    <div class="menu">
+    <div class="menu" v-on:click="hide">
         <router-link to="/"><div class="line"><label class="lnr lnr-home" to="/"><font>Inicio</font></label></div></router-link>
         <router-link to="/"><div class="line"><label class="lnr lnr-briefcase"><font>Noticias</font></label></div></router-link>
         <router-link to="/classifieds/add"><div class="line"><label class="lnr lnr-briefcase"><font>Clasificados</font></label></div></router-link>
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="d-sm-none">
-    <div class="menu-Mobil menu-show-mobil">
+    <div class="menu-Mobil menu-show-mobil" v-on:click="hide">
         <div class="line"><label class="lnr lnr-home"><font>Inicio</font></label></div>
         <div class="line"><label class="lnr lnr-briefcase"><font>Noticias</font></label></div>
         <div class="line"><label class="lnr lnr-briefcase"><font>Clasificados</font></label></div>
@@ -44,6 +44,8 @@ const $ = require('jquery')
 $(document).keyup(function(e) {
   if (e.keyCode === 27) $('.cancel').click(); $('.menu').removeClass("menu-show"); // esc
 });
+
+
 
 const separator = {
   template: `<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">`
@@ -91,6 +93,10 @@ const separator = {
       console.log('onItemClick')
     $('.menu').toggleClass("menu-show");
     $('.menu-Mobil').toggleClass("menu-show-mobil");
+    },
+    hide(){
+      $('.menu').removeClass("menu-show");
+      $('.menu-Mobil ').addClass("menu-show-mobil");
     }
   }
 }
