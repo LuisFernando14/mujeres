@@ -17,8 +17,9 @@
 
   <div class="d-none d-sm-block">
     <div class="menu">
-        <div class="line"><label class="lnr lnr-home"><font>Inicio</font></label></div>
-        <div class="line"><label class="lnr lnr-music-note"><font>Noticias</font></label></div>
+        <router-link to="/"><div class="line"><label class="lnr lnr-home" to="/"><font>Inicio</font></label></div></router-link>
+        <router-link to="/"><div class="line"><label class="lnr lnr-briefcase"><font>Noticias</font></label></div></router-link>
+        <router-link to="/classifieds/add"><div class="line"><label class="lnr lnr-briefcase"><font>Clasificados</font></label></div></router-link>
         <div class="line"><label class="lnr lnr-calendar-full"><font>Eventos</font></label></div>
         <div class="line"><label class="lnr lnr-chart-bars"><font>Precios</font></label></div>
         <div class="line"><label class="lnr lnr-cloud"><font>climas</font></label></div>
@@ -28,6 +29,7 @@
     <div class="menu-Mobil menu-show-mobil">
         <div class="line"><label class="lnr lnr-home"><font>Inicio</font></label></div>
         <div class="line"><label class="lnr lnr-briefcase"><font>Noticias</font></label></div>
+        <div class="line"><label class="lnr lnr-briefcase"><font>Clasificados</font></label></div>
         <div class="line"><label class="lnr lnr-calendar-full"><font>Eventos</font></label></div>
         <div class="line"><label class="lnr lnr-chart-bars"><font>Precios</font></label></div>
         <div class="line"><label class="lnr lnr-cloud"><font>climas</font></label></div>
@@ -40,7 +42,7 @@
 <script>
 const $ = require('jquery')
 $(document).keyup(function(e) {
-  if (e.keyCode === 27) $('.cancel').click(); $('.menu').removeClass("menu-show");  // esc
+  if (e.keyCode === 27) $('.cancel').click(); $('.menu').removeClass("menu-show"); // esc
 });
 
 const separator = {
