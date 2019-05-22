@@ -2,6 +2,8 @@
   <div class="bg-light margin" v-on:click="showOne">
     <MegaNoticia class="margin-2" />
     <News class="margin-2"  />
+    <Weather class="margin-2"  />
+    <Prices class="margin-2"  />
   </div>
 </template>
 
@@ -24,13 +26,10 @@ export default {
     showOne() {
     $('.menu').removeClass("menu-show");
     $('.menu-Mobil ').addClass("menu-show-mobil");
-
     }
   }
 }
-
 </script>
-
 <style>
 .margin {
   padding: 5%;

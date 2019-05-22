@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navigation id="menu" />
+    <Navigation id="menu"/>
     <router-view/>
     <Footer />
   </div>
@@ -15,7 +15,7 @@ export default {
     Navigation,
     Footer
   },
- 
-
 }
 </script>
+
+
