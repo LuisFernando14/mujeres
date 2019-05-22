@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light margin" v-on:click="showOne">
+  <div class="bg-light margin" v-on:click="showOne" @mouseover="overOut">
     <MegaNoticia class="margin-2" />
     <News class="margin-2"  />
     <Weather class="margin-2"  />
@@ -26,6 +26,10 @@ export default {
     showOne() {
     $('.menu').removeClass("menu-show");
     $('.menu-Mobil ').addClass("menu-show-mobil");
+    },
+    overOut(){
+      $('.menu').removeClass("menu-show");
+      $('.menu-Mobil ').addClass("menu-show-mobil");
     }
   }
 }

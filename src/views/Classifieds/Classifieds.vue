@@ -1,5 +1,5 @@
 <template>
-<div class="container" v-on:click="showOne">
+<div class="container" v-on:click="showOne" @mouseover="overOut">
     <div id="classifieds" >
         <div class="container">
             <div class="row">

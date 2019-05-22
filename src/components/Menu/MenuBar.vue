@@ -16,7 +16,7 @@
   </header>
 
   <div class="d-none d-sm-block">
-    <div class="menu" v-on:click="hide">
+    <div class="menu"  @mouseover="hoverr">
         <router-link to="/"><div class="line"><label class="lnr lnr-home" to="/"><font>Inicio</font></label></div></router-link>
         <router-link to="/"><div class="line"><label class="lnr lnr-briefcase"><font>Noticias</font></label></div></router-link>
         <router-link to="/classifieds/add"><div class="line"><label class="lnr lnr-briefcase"><font>Clasificados</font></label></div></router-link>
@@ -97,6 +97,10 @@ const separator = {
     hide(){
       $('.menu').removeClass("menu-show");
       $('.menu-Mobil ').addClass("menu-show-mobil");
+    },
+    hoverr(){
+      $('.menu').addClass("menu-show");
+      $('.menu-Mobil ').removeClass("menu-show-mobil");
     }
   }
 }
@@ -108,6 +112,7 @@ const separator = {
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
 
 header{
     width: 100%;
@@ -132,6 +137,7 @@ header{
 .lnr-menu:hover{
     border: 1px solid white;
 }
+
 
 
 

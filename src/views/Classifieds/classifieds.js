@@ -68,6 +68,11 @@ export default {
             $('.menu-Mobil ').addClass("menu-show-mobil");
 
         }
+        ,
+        overOut(){
+        $('.menu').removeClass("menu-show");
+        $('.menu-Mobil ').addClass("menu-show-mobil");
+        }
         
     }
 }
