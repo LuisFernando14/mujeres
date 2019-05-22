@@ -2,9 +2,6 @@
   <div class="bg-light margin" v-on:click="showOne">
     <MegaNoticia class="margin-2" />
     <News class="margin-2"  />
-   
-    
-
   </div>
 </template>
 

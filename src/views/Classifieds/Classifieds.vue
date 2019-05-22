@@ -1,5 +1,6 @@
 <template>
-    <div id="classifieds">
+<div class="container" v-on:click="showOne">
+    <div id="classifieds" >
         <div class="container">
             <div class="row">
                 <div class="col-sm-10 mx-auto">
@@ -126,5 +127,17 @@
         <region-select v-model="region" :country="country" :region="region" />
         -->
     </div>
+    </div>
 </template>
-<script src="./classifieds.js"></script>
+<script src="./classifieds.js">
+const $ = require('jquery')
+export default {
+  methods:{
+    showOne() {
+    console.log('Holaaaa')
+    }
+  }
+ 
+
+}
+</script>

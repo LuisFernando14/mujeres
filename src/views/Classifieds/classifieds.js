@@ -1,5 +1,6 @@
 import './classifieds.css'
 // import Places from "google-places-web";
+const $ = require('jquery')
 
 export default {
     name: 'Classifieds',
@@ -61,7 +62,13 @@ export default {
         },
         setSub(subKey) {
             console.log(subKey)
+        },
+        showOne() {
+            $('.menu').removeClass("menu-show");
+            $('.menu-Mobil ').addClass("menu-show-mobil");
+
         }
+        
     }
 }
 
