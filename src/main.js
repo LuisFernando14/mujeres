@@ -7,8 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import vueCountryRegionSelect from 'vue-country-region-select'
 import Places from "google-places-web";
 
-Vue.use(VueSidebarMenu)
-
 axios.defaults.baseURL = 'http://localhost:5000'; // same as the Url the server listens to
 Vue.prototype.$http = axios;
 
