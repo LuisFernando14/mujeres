@@ -1,15 +1,8 @@
 <template>
-  <div class="bg-light">
-    <br>
-    <MegaNoticia />
-    <br>
-    <br>
-    <News />
-    <br>
-    <Weather />
-    <br>
-    <Prices />
-    <br><br><br>
+  <div class="bg-light margin">
+    <MegaNoticia class="margin-2" />
+    <News class="margin-2"  />
+   
     
 
   </div>
@@ -31,3 +24,12 @@ export default {
   }
 }
 </script>
+<style>
+.margin {
+  padding: 5%;
+}
+.margin-2 {
+  padding: 1%;
+}
+</style>
+
