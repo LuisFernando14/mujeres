@@ -14,8 +14,8 @@
       <button type="button" class="btn btn-secondary">Cerrar sesión</button>
     </div>
     <div v-else>
-      <a href="" style="padding-right: 5px; color: #ffffff">Iniciar Sesion</a>
-      <button type="button" class="btn btn-outline-secondary">Registrate</button>
+      <a href="" style="padding-right: 5px; color: #6c757d">Iniciar Sesion</a>
+      <button type="button" class="btn btn-outline-light">Registrate</button>
     </div>
   </div>
 </div>
@@ -35,8 +35,8 @@
       <button type="button" class="btn btn-secondary">Cerrar sesión</button>
     </div>
     <div v-else>
-      <a href="" style="padding-right: 5px; color: #ffffff">Iniciar Sesion</a>
-      <button type="button" class="btn btn-outline-secondary">Registrate</button>
+      <a href="" style="padding-right: 5px; color: #6c757d">Iniciar Sesion</a>
+      <button type="button" class="btn btn-outline-light">Registrate</button>
     </div>
   </div>
 </div>
