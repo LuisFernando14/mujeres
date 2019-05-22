@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container margin-top">
   <div class="card mb-3" style="max-width:100%;">
   <div class="row no-gutters">
     <div class="col-md-4">
@@ -34,26 +34,41 @@ export default {
   }
 };
 </script>
-
 <style>
 .text-body{
   font-size: 1.5em;
+  
 }
 .text-title{
     font-size: 2.2em;
   }
-
 @media only screen and (max-width: 600px) {
    .text-body{
     font-size: 1em;
-    
   }
-  
   .text-title{
     font-size: 1.7em;
   }
+  .card-img{
+    height: 450px;
+  }
   
+}
+@media only screen and (max-width: 800px) {
+   
+  .card-img{
+    height: 500px;
+  }
+  .margin-top{
+    margin-top: 12%;
+  }
   
-
+}
+@media only screen and (max-width: 400px) {
+   
+  .card-img{
+    height: 400px;
+  }
+  
 }
 </style>
