@@ -1,19 +1,47 @@
 <template>
 <div>
-  <header>
+<div class="d-none d-sm-block">
+<header>
 <div class="d-flex">
   <div class="mr-auto">
     <label class="lnr lnr-menu" v-on:click="onItemClick"></label>
-    <img src="./../../assets/logo_banner.png" alt="Agrimercante.com" width="190" style="margin-left: 10px;">
+    
+    <img src="./../../assets/logo_banner.png" class="" alt="Agrimercante.com" width="190" style="margin-left: 10px;">
 
   </div>
   <div class="p-2">
-    <button type="button" class="btn btn-secondary">Registrate</button>
-    
+    <div v-if="token">
+      <button type="button" class="btn btn-secondary">Cerrar sesión</button>
+    </div>
+    <div v-else>
+      <a href="" style="padding-right: 5px; color: #ffffff">Iniciar Sesion</a>
+      <button type="button" class="btn btn-outline-secondary">Registrate</button>
+    </div>
   </div>
 </div>
+</header>
+</div>
+<div class="d-sm-none">
+<header>
+<div class="d-flex">
+  <div class="mr-auto">
+    <label class="lnr lnr-menu" v-on:click="onItemClick"></label>
+    
+    <img src="./../../assets/logo.png" class="" alt="Agrimercante.com" width="45" style="margin-left: 10px;">
 
-  </header>
+  </div>
+  <div class="p-2">
+    <div v-if="token">
+      <button type="button" class="btn btn-secondary">Cerrar sesión</button>
+    </div>
+    <div v-else>
+      <a href="" style="padding-right: 5px; color: #ffffff">Iniciar Sesion</a>
+      <button type="button" class="btn btn-outline-secondary">Registrate</button>
+    </div>
+  </div>
+</div>
+</header>
+</div>
 
   <div class="d-none d-sm-block">
     <div class="menu"  @mouseover="hoverr">
@@ -54,6 +82,7 @@ const separator = {
   name: 'App',
   data () {
     return {
+      token: localStorage.getItem('token')|| 0,
       menu: [
         {
           href: '/Noticias',
