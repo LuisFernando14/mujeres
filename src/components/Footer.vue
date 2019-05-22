@@ -1,6 +1,6 @@
 <template>
-  <footer style="background-color:#2e2e2f;color:white;">
-    <br>
+  <footer class="margin" style="background-color:#2e2e2f;color:white; ">
+    
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-7 col-md-10  d-flex justify-content-center">
@@ -34,7 +34,6 @@
       </div>
       
     </div>
-    <br><br>
   </footer>
 </template>
 <script>
@@ -43,6 +42,9 @@ export default {
 };
 </script>
 <style>
+.margin{
+  padding: 5%;
+}
 .f-letra {
   color: white;
   font-size: 1.21em;
