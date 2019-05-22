@@ -80,7 +80,8 @@
                     const token = res.data.id;
                     localStorage.setItem('token', token)
                     // console.log(res);
-                    this.$router.push('/');
+                    //this.$router.push('/');
+                    window.location.replace('/');
                 })
             },
         }
