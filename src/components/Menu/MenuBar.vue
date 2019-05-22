@@ -26,10 +26,10 @@
     </div>
   </div>
   <div class="d-sm-none">
-    <div class="menu-Mobil menu-show-mobil" v-on:click="hide">
-        <div class="line"><label class="lnr lnr-home"><font>Inicio</font></label></div>
-        <div class="line"><label class="lnr lnr-briefcase"><font>Noticias</font></label></div>
-        <div class="line"><label class="lnr lnr-briefcase"><font>Clasificados</font></label></div>
+    <div class="menu-Mobil menu-show-mobil" v-on:click="onItemClick">
+        <router-link to="/"><div class="line"><label class="lnr lnr-home"><font>Inicio</font></label></div></router-link>
+        <router-link to="/"><div class="line"><label class="lnr lnr-briefcase"><font>Noticias</font></label></div></router-link>
+        <router-link to="/classifieds/add"><div class="line"><label class="lnr lnr-briefcase"><font>Clasificados</font></label></div></router-link>
         <div class="line"><label class="lnr lnr-calendar-full"><font>Eventos</font></label></div>
         <div class="line"><label class="lnr lnr-chart-bars"><font>Precios</font></label></div>
         <div class="line"><label class="lnr lnr-cloud"><font>climas</font></label></div>
@@ -151,6 +151,7 @@ header{
     transition: all 300ms;
     z-index: 9;
     overflow: auto;
+    opacity:0.95;
 }
 .menu-Mobil{
     width: 60px;
