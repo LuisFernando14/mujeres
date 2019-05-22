@@ -8,7 +8,7 @@
     <nav class="navbar navbar-light bg-light ">
       <div class="container-fluid" >
         <div class="row">
-          <div class="col" v-show="$store.getters.user">
+          <div class="col">
             <div
               ref="bmBurgerButton"
               class="bm-burger-button"

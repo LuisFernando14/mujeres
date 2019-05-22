@@ -3,7 +3,6 @@ import Router from 'vue-router';
 import UserSignUp from '@/views/User/UserSignUp';
 import UserLogin from '@/views/User/UserLogin';
 import Home from '@/views/Home/Home';
-import AuthGuard from '@/router/auth';
 import Classifieds from '@/views/Classifieds/Classifieds.vue';
 
 Vue.use(Router)
@@ -25,7 +24,6 @@ let router = new Router({
       path: '/',
       name: '',
       component: Home,
-      beforeEnter: AuthGuard
     },
     {
       path: '/classifieds/add',
@@ -38,7 +36,4 @@ let router = new Router({
     }
   ]
 })
-
-
-
 export default router
