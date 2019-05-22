@@ -39,6 +39,10 @@
  
 <script>
 const $ = require('jquery')
+$(document).keyup(function(e) {
+  if (e.keyCode === 27) $('.cancel').click(); $('.menu').removeClass("menu-show");  // esc
+});
+
 const separator = {
   template: `<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">`
 }
