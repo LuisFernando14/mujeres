@@ -130,14 +130,5 @@
     </div>
 </template>
 <script src="./classifieds.js">
-const $ = require('jquery')
-export default {
-  methods:{
-    showOne() {
-    console.log('Holaaaa')
-    }
-  }
- 
 
-}
 </script>
