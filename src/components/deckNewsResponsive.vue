@@ -3,29 +3,25 @@
     <div id="carouselExampleInterval" class="carousel slide" data-interval="false" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" >
-          <div class="card-deck card bg-light" style="padding-top:2%;padding-bottom:2%">
-            <div class="card border-light">
-              <img v-bind:src="img" class="card-img-top news-img" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">{{title}}</h5>
-                <p class="card-text">{{short}}</p>
-                <p class="card-text">
-                  <small class="text-muted">{{date}}</small>
-                </p>
+          <div class="card-deck card  bg-transparent" style="padding-top:2%;padding-bottom:2%">
+            <div class="card border-light bg-transparent">
+              <img v-bind:src="img" class="card-img-top news-img bg-transparent" alt="...">
+              <div class="card-body bg-transparent bg-transparent">
+                <h5 class="card-title bg-transparent">{{title}}</h5>
+                <small class="text-muted">{{date}}</small>
+                
               </div>
             </div>
           </div>
         </div>
-        <div v-for="card in new1" :key="card.city" class="carousel-item" data-interval="false">
-          <div class="card-deck card bg-light" style="padding-top:2%;padding-bottom:2%">
-            <div class="card border-light">
+        <div v-for="card in new1" :key="card.city" class="carousel-item bg-transparent" data-interval="false">
+          <div class="card-deck card bg-light bg-transparent" style="padding-top:2%;padding-bottom:2%">
+            <div class="card border-light bg-transparent">
               <img v-bind:src="card.img" class="card-img-top news-img" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">{{card.title}}</h5>
-                <p class="card-text">{{card.short}}</p>
-                <p class="card-text">
-                  <small class="text-muted">{{card.date}}</small>
-                </p>
+              <div class="card-body bg-transparent">
+                <h5 class="card-title bg-transparent">{{card.title}}</h5>
+                <small class="text-muted">{{card.date}}</small>
+                
               </div>
             </div>
           </div>
