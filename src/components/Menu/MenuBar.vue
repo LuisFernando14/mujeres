@@ -5,8 +5,8 @@
 <div class="d-flex">
   <div class="mr-auto">
     <label class="lnr lnr-menu" v-on:click="onItemClick"></label>
-    
-    <img src="./../../assets/logo_banner.png" class="" alt="Agrimercante.com" width="190" style="margin-left: 10px;">
+
+    <img src="./../../assets/logo_banner.png" class="" alt="Agrimercante.com" style="margin-left: 1.5em; width: 190px">
 
   </div>
   <div class="p-2">
@@ -14,7 +14,7 @@
       <button type="button" class="btn btn-secondary">Cerrar sesión</button>
     </div>
     <div v-else>
-      <a href="" style="padding-right: 5px; color: #ffffff">Iniciar Sesion</a>
+      <a href="" style="padding-right: 5px; color: #ffffff">Iniciar sesión</a>
       <button type="button" class="btn btn-outline-secondary">Registrate</button>
     </div>
   </div>
@@ -26,16 +26,14 @@
 <div class="d-flex">
   <div class="mr-auto">
     <label class="lnr lnr-menu" v-on:click="onItemClick"></label>
-    
-    <img src="./../../assets/logo.png" class="" alt="Agrimercante.com" width="45" style="margin-left: 10px;">
-
+    <img src="./../../assets/logo.png" class="" alt="Agrimercante.com" style="margin-left: 2em">
   </div>
   <div class="p-2">
     <div v-if="token">
       <button type="button" class="btn btn-secondary">Cerrar sesión</button>
     </div>
     <div v-else>
-      <a href="" style="padding-right: 5px; color: #ffffff">Iniciar Sesion</a>
+      <a href="" style="padding-right: 5px; color: #ffffff">Iniciar sesión</a>
       <button type="button" class="btn btn-outline-secondary">Registrate</button>
     </div>
   </div>
@@ -66,7 +64,7 @@
 
 </div>
 </template>
- 
+
 <script>
 const $ = require('jquery')
 $(document).keyup(function(e) {
@@ -133,7 +131,7 @@ const separator = {
     }
   }
 }
-</script> 
+</script>
 <style>
 *{
     margin: 0;
@@ -214,7 +212,7 @@ header{
 
 
 .line:hover{
-    background: #188fe6; 
+    background: #188fe6;
     cursor: pointer;
 }
 .line label{
