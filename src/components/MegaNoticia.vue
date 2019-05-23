@@ -9,7 +9,7 @@
       <div class="card-body ">
         <h5 class="card-title text-title">{{news.title}}</h5>
         <p class="card-text text-body">{{news.shortBody}}</p>
-        <footer class="blockquote-footer text-right"><a href="http://">{{news.fuente}}</a> </footer>
+        <footer class="blockquote-footer text-right">{{news.fuente}} </footer>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@ export default {
           "https://portal-data1.storage.googleapis.com/news/1557935933478_close-up-color-delicious-1137355.jpg",
         shortBody:
           "El estado mexicano de Oaxaca es líder exportador de mangos en el país. Las cifras de exportaciones de 2019 son tremendamente positivas, y están cerca de la meta propuesta al principio de temporada, según datos de la Secretaría de Desarrollo Agropecuario, Pesca y Acuacultura (Sedapa).",
-        fuente: "www.freshplaza.es"
+        fuente: "23 de Mayo 2019"
       }
     };
   }
