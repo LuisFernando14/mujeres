@@ -16,15 +16,23 @@
               <small class="text-muted">{{card.date}}</small>
             </p>
           </div>
+          <div class="card-footer">
+            <Modal />
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import Modal from '@/components/News/Modal';
+
 export default {
   data: () => ({}),
-  props: ["new1"]
+  props: ["new1"],
+  components:{
+    Modal,
+  }
 };
 </script>
 <style >
