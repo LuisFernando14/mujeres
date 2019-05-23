@@ -4,9 +4,10 @@
       <header>
         <div class="d-flex">
           <div class="mr-auto">
-            <label class="lnr lnr-menu" v-on:click="onItemClick"></label>
+            <label v-show="token" class="lnr lnr-menu" v-on:click="onItemClick"></label>
             <a href="/">
               <img
+                v-if="token"
                 src="./../../assets/logo_banner.png"
                 class
                 alt="Agrimercante.com"
@@ -14,14 +15,24 @@
                 style="margin-left: 10px;"
               >
             </a>
+            <a href="/">
+              <img
+                v-if="!token"
+                src="./../../assets/logo_banner.png"
+                class
+                alt="Agrimercante.com"
+                width="190"
+                style="margin-left: 10px;padding-top: 10px;"
+              >
+            </a>
           </div>
           <div class="p-2">
             <div v-if="token">
-              <button type="button" class="btn btn-secondary">Cerrar sesión</button>
+              <router-link to="/"><button type="button" class="btn btn-secondary" v-on:click="cerrarSesion">Cerrar sesión</button></router-link>
             </div>
             <div v-else>
-              <a href style="padding-right: 5px; color: #6c757d">Iniciar Sesion</a>
-              <button type="button" class="btn btn-outline-light">Registrate</button>
+              <router-link to="/login"><a href style="padding-right: 5px; color: #6c757d">Iniciar sesión</a></router-link>
+              <router-link to="/signup"><button type="button" class="btn btn-outline-light">Regìstrate</button></router-link>
             </div>
           </div>
         </div>
@@ -43,11 +54,11 @@
           </div>
           <div class="p-2">
             <div v-if="token">
-              <button type="button" class="btn btn-secondary">Cerrar sesión</button>
+              <button type="button" class="btn btn-secondary" v-on:click="cerrarSesion">Cerrar sesión</button>
             </div>
             <div v-else>
-              <a href style="padding-right: 5px; color: #6c757d">Iniciar Sesion</a>
-              <button type="button" class="btn btn-outline-light">Registrate</button>
+              <router-link to="/login"><a href style="padding-right: 5px; color: #6c757d">Iniciar sesión</a></router-link>
+              <router-link to="/signup"><button type="button" class="btn btn-outline-light">Regìstrate</button></router-link>
             </div>
           </div>
         </div>
@@ -55,7 +66,7 @@
     </div>
 
     <div class="d-none d-sm-block">
-      <div class="menu" @mouseover="hoverr">
+      <div v-if="token" class="menu" @mouseover="hoverr">
         <div class="line" style="padding-left: 6px;">
           <div class="circulo">
             <h2>RG</h2>
@@ -191,6 +202,10 @@ export default {
     };
   },
   methods: {
+    cerrarSesion () {
+      localStorage.removeItem("token");
+      location.reload();
+    },
     onCollapse(collapsed) {
       this.collapsed = collapsed;
     },
