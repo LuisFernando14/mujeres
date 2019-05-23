@@ -29,17 +29,15 @@ export default {
   },
   methods:{
     showOne() {
-    $('.menu').removeClass("menu-show");
-      $('#nametitle').css('visibility', 'visible');
-
-    $('.menu-Mobil ').addClass("menu-show-mobil");
-    },
+        $('.menu').removeClass("menu-show");
+        $('.menu-Mobil ').addClass("menu-show-mobil");
+        },
     overOut(){
-      $('#nametitle').addClass("hidename");   
-      
-      $('.menu').removeClass("menu-show");
-      $('.menu-Mobil ').addClass("menu-show-mobil");
-    }
+        $('.menu').removeClass("menu-show");
+        $('.menu-Mobil ').addClass("menu-show-mobil");
+        $('#nametitle').addClass("hidename");
+
+        }
   }
 }
 </script>

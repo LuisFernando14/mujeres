@@ -21,10 +21,6 @@ export default {
 
             console.log(`The user picked ${city} with the coordinates ${lat}, ${lon}`);
             console.log(place);
-            // console.log(this.autocomplete.getRegionWithCountry());
-            // console.log(city);
-            // console.log(state);
-            // console.log(country);
         });
     },
     data() {
@@ -54,26 +50,15 @@ export default {
     },
     computed: {},
     methods: {
-        hazAlgo () {
-            console.log('haciendoa lgo')
-        },
-        setCat(catKey) {
-            console.log(catKey)
-        },
-        setSub(subKey) {
-            console.log(subKey)
-        },
         showOne() {
             $('.menu').removeClass("menu-show");
             $('.menu-Mobil ').addClass("menu-show-mobil");
-
-        }
-        ,
+        },
         overOut(){
-        $('.menu').removeClass("menu-show");
-        $('.menu-Mobil ').addClass("menu-show-mobil");
+            $('.menu').removeClass("menu-show");
+            $('.menu-Mobil ').addClass("menu-show-mobil");
+            $('#nametitle').addClass("hidename");
         }
-        
     }
 }
 

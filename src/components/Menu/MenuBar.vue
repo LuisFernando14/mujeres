@@ -5,7 +5,6 @@
         <div class="d-flex">
           <div class="mr-auto">
             <label class="lnr lnr-menu" v-on:click="onItemClick"></label>
-
             <a href="/">
               <img
                 src="./../../assets/logo_banner.png"
@@ -57,8 +56,12 @@
 
     <div class="d-none d-sm-block">
       <div class="menu" @mouseover="hoverr">
-        <router-link to="/"><div class="line" style="padding-left: 6px;"><div class="circulo"><h2>RG</h2></div><div id="nametitle" class="hidename" style="padding-left: 6px;">Ruben Garcia</div></div></router-link>
-
+          <div class="line" style="padding-left: 6px;">
+            <div class="circulo">
+              <h2>RG</h2>
+            </div>
+            <a class="title" href="/"><h4 id="nametitle" class="hidename title" > Ruben Garcia</h4></a> 
+          </div>
         <router-link to="/">
           <div class="line">
             <label class="lnr lnr-home" to="/">
@@ -187,31 +190,20 @@ export default {
   },
   methods: {
     onCollapse(collapsed) {
-      console.log(collapsed);
       this.collapsed = collapsed;
     },
-    onItemClick (event, item) {
-  
-    if( $('#nametitle').css('visibility') != 'hidden' ) {
-      $('#nametitle').css('visibility', 'hidden');
-    } else {
-      $('#nametitle').css('visibility', 'visible');
-    }
+    onItemClick(event, item) {
+      if ($("#nametitle").css("visibility") != "hidden")
+        $("#nametitle").addClass("hidename");
+      else $("#nametitle").removeClass("hidename");
 
-      console.log('onItemClick')
-    $('.menu').toggleClass("menu-show");
-    $('.menu-Mobil').toggleClass("menu-show-mobil");
+      $(".menu").toggleClass("menu-show");
+      $(".menu-Mobil").toggleClass("menu-show-mobil");
     },
-    hide(){
-      $('#nametitle').addClass("hidename");   
-      $('.menu').removeClass("menu-show");
-      $('.menu-Mobil ').addClass("menu-show-mobil");
-    },
-    hoverr(){
-      $('#nametitle').removeClass("hidename");
-      
-      $('.menu').addClass("menu-show");
-      $('.menu-Mobil ').removeClass("menu-show-mobil");
+    hoverr() {
+      $(".menu").addClass("menu-show");
+      $(".menu-Mobil ").removeClass("menu-show-mobil");
+      $("#nametitle").removeClass("hidename");
     }
   }
 };
@@ -222,6 +214,17 @@ export default {
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+}
+.title{
+  color: white;
+  text-decoration: none;
+  margin-left: 20%;
+  margin-top: 5%;
+  
+}
+.title:hover{
+  text-decoration: none;
+  color: blue;
 }
 
 header {
@@ -249,34 +252,32 @@ header {
 }
 
 .circulo {
-	width: 3rem;
-	height: 3rem;
-	border-radius: 50%;
-	background: rgb(0, 0, 0);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  margin:0px auto;
-  padding:1.6%
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  padding: 1.6%;
+  
 }
 
 .circulo > h2 {
-	font-family: sans-serif;
-	color: white;
-	font-size: 1.2rem;
-	font-weight: bold;
+  font-family: sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
-.hidename{
-visibility: hidden
+.hidename {
+  visibility: hidden;
+  text-decoration: none;
 }
-.hover{
-    color: aqua;
-    display : block;
+.hover {
+  color: aqua;
+  display: block;
 }
-
-
-
-
 /*Menu*/
 
 .menu {
