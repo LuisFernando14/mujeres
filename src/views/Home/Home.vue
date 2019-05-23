@@ -4,7 +4,6 @@
     <News class="margin-2"  />
     <Weather class="margin-2"  />
     <Prices class="margin-2"  />
-    <Ficha class="margin-2"  />
   </div>
 </template>
 
@@ -14,7 +13,6 @@ import Weather from '@/components/Weather';
 import MegaNoticia from '@/components/MegaNoticia';
 import News from '@/components/News';
 import Prices from '@/components/Prices';
-import Ficha from '@/components/Ficha';
 
 export default {
   name:'Home',
@@ -23,7 +21,6 @@ export default {
     MegaNoticia,
     News,
     Prices,
-    Ficha
   },
   methods:{
     showOne() {
