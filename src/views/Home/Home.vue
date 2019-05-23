@@ -4,6 +4,8 @@
     <News class="margin-2"  />
     <Weather class="margin-2"  />
     <Prices class="margin-2"  />
+    <Carousel class="margin-2"  />
+    
   </div>
 </template>
 
@@ -11,8 +13,10 @@
 const $ = require('jquery')
 import Weather from '@/components/Weather';
 import MegaNoticia from '@/components/MegaNoticia';
-import News from '@/components/News';
+import News from '@/components/News/News';
 import Prices from '@/components/Prices';
+import Carousel from '@/components/Carousel/Carousel';
+
 
 export default {
   name:'Home',
@@ -20,14 +24,19 @@ export default {
     Weather,
     MegaNoticia,
     News,
-    Prices
+    Prices,
+    Carousel,
   },
   methods:{
     showOne() {
     $('.menu').removeClass("menu-show");
+      $('#nametitle').css('visibility', 'visible');
+
     $('.menu-Mobil ').addClass("menu-show-mobil");
     },
     overOut(){
+      $('#nametitle').addClass("hidename");   
+      
       $('.menu').removeClass("menu-show");
       $('.menu-Mobil ').addClass("menu-show-mobil");
     }

@@ -48,8 +48,8 @@
   </div>
 </template>
 <script>
-import DeckNews from "@/components/deckNews";
-import deckNewsResponsive from "@/components/deckNewsResponsive";
+import DeckNews from "@/components/News/deckNews";
+import deckNewsResponsive from "@/components/News/deckNewsResponsive";
 export default {
   data: () => ({
     news: [
