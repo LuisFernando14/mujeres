@@ -5,8 +5,8 @@
 <div class="d-flex">
   <div class="mr-auto">
     <label class="lnr lnr-menu" v-on:click="onItemClick"></label>
-    
-    <img src="./../../assets/logo_banner.png" class="" alt="Agrimercante.com" width="190" style="margin-left: 10px;">
+
+    <img src="./../../assets/logo_banner.png" class="" alt="Agrimercante.com" style="margin-left: 1.7em; width: 190px">
 
   </div>
   <div class="p-2">
@@ -14,8 +14,8 @@
       <button type="button" class="btn btn-secondary">Cerrar sesión</button>
     </div>
     <div v-else>
-      <a href="" style="padding-right: 5px; color: #6c757d">Iniciar Sesion</a>
-      <button type="button" class="btn btn-outline-light">Registrate</button>
+      <a href="" style="margin-right: 1.5em; color: #6c757d">Iniciar sesión</a>
+      <button type="button" class="btn btn-outline-light" style="margin-right: 1em">Regístrate</button>
     </div>
   </div>
 </div>
@@ -26,8 +26,8 @@
 <div class="d-flex">
   <div class="mr-auto">
     <label class="lnr lnr-menu" v-on:click="onItemClick"></label>
-    
-    <img src="./../../assets/logo.png" class="" alt="Agrimercante.com" width="45" style="margin-left: 10px;">
+
+    <img src="./../../assets/loguito.png" class="" alt="Agrimercante.com" style="margin-left: 10px; width: 45px">
 
   </div>
   <div class="p-2">
@@ -35,8 +35,8 @@
       <button type="button" class="btn btn-secondary">Cerrar sesión</button>
     </div>
     <div v-else>
-      <a href="" style="padding-right: 5px; color: #6c757d">Iniciar Sesion</a>
-      <button type="button" class="btn btn-outline-light">Registrate</button>
+      <a href="" style="padding-right: 5px; color: #6c757d">Iniciar sesión</a>
+      <button type="button" class="btn btn-outline-light">Regístrate</button>
     </div>
   </div>
 </div>
@@ -46,27 +46,27 @@
   <div class="d-none d-sm-block">
     <div class="menu"  @mouseover="hoverr">
         <router-link to="/"><div class="line"><label class="lnr lnr-home" to="/"><font>Inicio</font></label></div></router-link>
-        <router-link to="/"><div class="line"><label class="lnr lnr-briefcase"><font>Noticias</font></label></div></router-link>
-        <router-link to="/classifieds/add"><div class="line"><label class="lnr lnr-briefcase"><font>Clasificados</font></label></div></router-link>
+        <router-link to="/"><div class="line"><label class="lnr lnr-earth"><font>Noticias</font></label></div></router-link>
+        <router-link to="/classifieds/add"><div class="line"><label class="lnr lnr-cart"><font>Clasificados</font></label></div></router-link>
         <div class="line"><label class="lnr lnr-calendar-full"><font>Eventos</font></label></div>
         <div class="line"><label class="lnr lnr-chart-bars"><font>Precios</font></label></div>
-        <div class="line"><label class="lnr lnr-cloud"><font>climas</font></label></div>
+        <div class="line"><label class="lnr lnr-sun"><font>Climas</font></label></div>
     </div>
   </div>
   <div class="d-sm-none">
     <div class="menu-Mobil menu-show-mobil" v-on:click="onItemClick">
         <router-link to="/"><div class="line"><label class="lnr lnr-home"><font>Inicio</font></label></div></router-link>
-        <router-link to="/"><div class="line"><label class="lnr lnr-briefcase"><font>Noticias</font></label></div></router-link>
-        <router-link to="/classifieds/add"><div class="line"><label class="lnr lnr-briefcase"><font>Clasificados</font></label></div></router-link>
+        <router-link to="/"><div class="line"><label class="lnr lnr-earth"><font>Noticias</font></label></div></router-link>
+        <router-link to="/classifieds/add"><div class="line"><label class="lnr lnr-cart"><font>Clasificados</font></label></div></router-link>
         <div class="line"><label class="lnr lnr-calendar-full"><font>Eventos</font></label></div>
         <div class="line"><label class="lnr lnr-chart-bars"><font>Precios</font></label></div>
-        <div class="line"><label class="lnr lnr-cloud"><font>climas</font></label></div>
+        <div class="line"><label class="lnr lnr-sun"><font>Climas</font></label></div>
     </div>
   </div>
 
 </div>
 </template>
- 
+
 <script>
 const $ = require('jquery')
 $(document).keyup(function(e) {
@@ -133,7 +133,7 @@ const separator = {
     }
   }
 }
-</script> 
+</script>
 <style>
 *{
     margin: 0;
@@ -214,7 +214,7 @@ header{
 
 
 .line:hover{
-    background: #188fe6; 
+    background: #188fe6;
     cursor: pointer;
 }
 .line label{
