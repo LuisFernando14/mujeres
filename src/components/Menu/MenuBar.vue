@@ -14,7 +14,7 @@
       <button type="button" class="btn btn-secondary">Cerrar sesión</button>
     </div>
     <div v-else>
-      <a href="" style="padding-right: 5px; color: #6c757d">Iniciar Sesion</a>
+      <a href="" style="padding-right: 5px; color: #6c757d">Iniciar sesion</a>
       <button type="button" class="btn btn-outline-light">Registrate</button>
     </div>
   </div>
@@ -35,7 +35,7 @@
       <button type="button" class="btn btn-secondary">Cerrar sesión</button>
     </div>
     <div v-else>
-      <a href="" style="padding-right: 5px; color: #6c757d">Iniciar Sesion</a>
+      <a href="" style="padding-right: 5px; color: #6c757d">Iniciar sesion</a>
       <button type="button" class="btn btn-outline-light">Registrate</button>
     </div>
   </div>
@@ -45,9 +45,10 @@
 
   <div class="d-none d-sm-block">
     <div class="menu"  @mouseover="hoverr">
+        <router-link to="/"><div class="line" style="padding-left: 6px;"><div class="circulo"><h2>RG</h2></div><div id="nametitle" class="hidename" style="padding-left: 6px;">Ruben Garcia</div></div></router-link>
         <router-link to="/"><div class="line"><label class="lnr lnr-home" to="/"><font>Inicio</font></label></div></router-link>
         <router-link to="/"><div class="line"><label class="lnr lnr-briefcase"><font>Noticias</font></label></div></router-link>
-        <router-link to="/classifieds/add"><div class="line"><label class="lnr lnr-briefcase"><font>Clasificados</font></label></div></router-link>
+        <router-link to="/classifieds/add"><div class="line"><label class="lnr lnr-tag"><font>Clasificados</font></label></div></router-link>
         <div class="line"><label class="lnr lnr-calendar-full"><font>Eventos</font></label></div>
         <div class="line"><label class="lnr lnr-chart-bars"><font>Precios</font></label></div>
         <div class="line"><label class="lnr lnr-cloud"><font>climas</font></label></div>
@@ -55,9 +56,10 @@
   </div>
   <div class="d-sm-none">
     <div class="menu-Mobil menu-show-mobil" v-on:click="onItemClick">
+        <router-link to="/"><div class="line" style="padding-left: 6px;"><div class="circulo"><h2>RG</h2></div></div></router-link>
         <router-link to="/"><div class="line"><label class="lnr lnr-home"><font>Inicio</font></label></div></router-link>
         <router-link to="/"><div class="line"><label class="lnr lnr-briefcase"><font>Noticias</font></label></div></router-link>
-        <router-link to="/classifieds/add"><div class="line"><label class="lnr lnr-briefcase"><font>Clasificados</font></label></div></router-link>
+        <router-link to="/classifieds/add"><div class="line"><label class="lnr lnr-tag"><font>Clasificados</font></label></div></router-link>
         <div class="line"><label class="lnr lnr-calendar-full"><font>Eventos</font></label></div>
         <div class="line"><label class="lnr lnr-chart-bars"><font>Precios</font></label></div>
         <div class="line"><label class="lnr lnr-cloud"><font>climas</font></label></div>
@@ -119,15 +121,25 @@ const separator = {
       this.collapsed = collapsed
     },
     onItemClick (event, item) {
+  
+    if( $('#nametitle').css('visibility') != 'hidden' ) {
+      $('#nametitle').css('visibility', 'hidden');
+    } else {
+      $('#nametitle').css('visibility', 'visible');
+    }
+
       console.log('onItemClick')
     $('.menu').toggleClass("menu-show");
     $('.menu-Mobil').toggleClass("menu-show-mobil");
     },
     hide(){
+      $('#nametitle').addClass("hidename");   
       $('.menu').removeClass("menu-show");
       $('.menu-Mobil ').addClass("menu-show-mobil");
     },
     hoverr(){
+      $('#nametitle').removeClass("hidename");
+      
       $('.menu').addClass("menu-show");
       $('.menu-Mobil ').removeClass("menu-show-mobil");
     }
@@ -167,8 +179,31 @@ header{
     border: 1px solid white;
 }
 
+.circulo {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	background: rgb(0, 0, 0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  margin:0px auto;
+  padding:1.6%
+}
 
-
+.circulo > h2 {
+	font-family: sans-serif;
+	color: white;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+.hidename{
+visibility: hidden
+}
+.hover{
+    color: aqua;
+    display : block;
+}
 
 
 
