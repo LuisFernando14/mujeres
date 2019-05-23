@@ -36,6 +36,7 @@ export default {
         $('.menu').removeClass("menu-show");
         $('.menu-Mobil ').addClass("menu-show-mobil");
         $('#nametitle').addClass("hidename");
+        
 
         }
   }
