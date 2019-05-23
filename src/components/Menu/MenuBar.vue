@@ -221,6 +221,7 @@ export default {
       $(".menu").addClass("menu-show");
       $(".menu-Mobil ").removeClass("menu-show-mobil");
       $("#nametitle").removeClass("hidename");
+
     }
   }
 };
