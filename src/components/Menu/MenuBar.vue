@@ -12,7 +12,7 @@
                 class
                 alt="Agrimercante.com"
                 width="190"
-                style="margin-left: 10px;"
+                style="margin-left: 1.8em;"
               >
             </a>
             <a href="/">
@@ -32,7 +32,7 @@
             </div>
             <div v-else>
               <router-link to="/login"><a href style="padding-right: 5px; color: #6c757d">Iniciar sesión</a></router-link>
-              <router-link to="/signup"><button type="button" class="btn btn-outline-light">Regìstrate</button></router-link>
+              <router-link to="/signup"><button type="button" class="btn btn-outline-light">Regístrate</button></router-link>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@
             <label class="lnr lnr-menu" v-on:click="onItemClick"></label>
 
             <img
-              src="./../../assets/logo.png"
+              src="./../../assets/loguito.png"
               class
               alt="Agrimercante.com"
               width="45"
@@ -58,7 +58,7 @@
             </div>
             <div v-else>
               <router-link to="/login"><a href style="padding-right: 5px; color: #6c757d">Iniciar sesión</a></router-link>
-              <router-link to="/signup"><button type="button" class="btn btn-outline-light">Regìstrate</button></router-link>
+              <router-link to="/signup"><button type="button" class="btn btn-outline-light">Regístrate</button></router-link>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@
             <h2>RG</h2>
           </div>
           <a class="title" href="/">
-            <h4 id="nametitle" class="hidename title">Ruben Garcia</h4>
+            <h4 id="nametitle" class="hidename title">Luis Fernando</h4>
           </a>
         </div>
         <router-link to="/">
@@ -155,7 +155,7 @@
     </div>
   </div>
 </template>
- 
+
 <script>
 const $ = require("jquery");
 $(document).keyup(function(e) {
@@ -225,7 +225,7 @@ export default {
     }
   }
 };
-</script> 
+</script>
 <style>
 * {
   margin: 0;
