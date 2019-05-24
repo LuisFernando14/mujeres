@@ -154,11 +154,14 @@
         </div>
       </div>
     </div>
+    <loading :active.sync="isLoading" :can-cancel="true" :is-full-page="fullPage"></loading>
   </div>
 </template>
 
 <script>
+import Loading from 'vue-loading-overlay';
 const $ = require("jquery");
+import 'vue-loading-overlay/dist/vue-loading.css';
 $(document).keyup(function(e) {
   if (e.keyCode === 27) $(".cancel").click();
   $(".menu").removeClass("menu-show"); // esc
@@ -169,6 +172,9 @@ const separator = {
 };
 export default {
   name: "App",
+  components:{
+    Loading
+  }, 
   data() {
     return {
       token: localStorage.getItem("token") || 0,
@@ -199,13 +205,19 @@ export default {
           visibleOnCollapse: true
         }
       ],
+      isLoading: false,
+      fullPage: true,
       collapsed: true
     };
   },
   methods: {
     cerrarSesion () {
+      this.isLoading = true
       localStorage.removeItem("token");
-      location.reload();
+      setTimeout(() => {
+        this.isLoading = false
+        window.location.replace('/');
+      },300)
     },
     onCollapse(collapsed) {
       this.collapsed = collapsed;
@@ -214,7 +226,6 @@ export default {
       if ($("#nametitle").css("visibility") != "hidden")
         $("#nametitle").addClass("hidename");
       else $("#nametitle").removeClass("hidename");
-
       $(".menu").toggleClass("menu-show");
       $(".menu-Mobil").toggleClass("menu-show-mobil");
     },
@@ -222,7 +233,6 @@ export default {
       $(".menu").addClass("menu-show");
       $(".menu-Mobil ").removeClass("menu-show-mobil");
       $("#nametitle").removeClass("hidename");
-
     }
   }
 };

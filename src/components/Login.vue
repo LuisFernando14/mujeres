@@ -47,7 +47,7 @@ import { finished } from 'stream';
 export default {
   name: 'login',
   components: {
-      Loading
+    Loading
   },
   data() {
     return {
@@ -60,7 +60,7 @@ export default {
     }
   },
   mounted() {
-      console.log('montado');
+    console.log('montado');
   },
   methods: {
     iniciarSesion() {
