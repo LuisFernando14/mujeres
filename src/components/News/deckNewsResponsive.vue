@@ -65,5 +65,3 @@ export default {
   props: ["new1"]
 };
 </script>
-<style >
-</style>
