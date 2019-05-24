@@ -69,7 +69,7 @@
       <div v-if="token" class="menu" @mouseover="hoverr">
         <div class="line" style="padding-left: 6px;">
           <div class="circulo">
-            <h2>RG</h2>
+            <h2>LF</h2>
           </div>
           <a class="title" href="/">
             <h4 id="nametitle" class="hidename title">Luis Fernando</h4>
