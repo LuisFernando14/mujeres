@@ -4,6 +4,7 @@ import router from './router';
 import axios from 'axios';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/css/styles.css'
 import vueCountryRegionSelect from 'vue-country-region-select'
 import Places from "google-places-web";
 

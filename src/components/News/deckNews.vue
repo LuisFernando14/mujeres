@@ -35,15 +35,3 @@ export default {
   }
 };
 </script>
-<style >
-.news-img{
-  width:200px;
-  height:150px;
-}
-@media only screen and (max-width: 600px) {
-   .news-img{
-    width:50px;
-    height:200px;
-  }
-}
-</style>

@@ -41,29 +41,3 @@ export default {
   data: () => ({})
 };
 </script>
-<style>
-.margin{
-  padding: 5%;
-}
-.f-letra {
-  color: white;
-  font-size: 1.21em;
-}
-.f-letra:hover {
-  color: rgb(0, 123, 138);
-}
-.aaa {
-  text-decoration: none; /* no underline */
-}
-.aaa:hover {
-  text-decoration: none; /* no underline */
-}
-
-
-
-@media only screen and (max-width: 600px) {
-   .f-letra{
-    font-size: 0.8em;
-  }
-}
-</style>
