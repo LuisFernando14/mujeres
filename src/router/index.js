@@ -28,12 +28,28 @@ let router = new Router({
     {
       path: '/classifieds/add',
       name: 'Classifieds',
-      component: Classifieds
+      component: Classifieds,
+      meta: { requiresAuth: true },
     },
     {
       path: '*',
       redirect: '/'
     }
   ]
+})
+router.beforeEach((to, from, next) => {
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
+  const isLogged = localStorage.getItem("token")
+  if ( ! requiresAuth && isLogged && to.path === '/login') {
+    return next('/')
+  } 
+  if ( ! requiresAuth && isLogged && to.path === '/signup') {
+    return next('/')
+  } 
+  if (requiresAuth && ! isLogged) {
+    next('/')
+  } else {
+    next()
+  }
 })
 export default router
