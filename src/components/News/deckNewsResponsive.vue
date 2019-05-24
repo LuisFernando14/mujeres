@@ -5,7 +5,7 @@
         <div class="carousel-item active" >
           <div class="card-deck card  bg-transparent" style="padding-top:2%;padding-bottom:2%">
             <div class="card border-light bg-transparent">
-              <img v-bind:src="img" class="card-img-top news-img bg-transparent" alt="...">
+              <img v-bind:src="img" class="card-img-top bg-transparent" alt="...">
               <div class="card-body bg-transparent bg-transparent">
                 <h5 class="card-title bg-transparent">{{title}}</h5>
                 <small class="text-muted">{{date}}</small>
@@ -17,7 +17,7 @@
         <div v-for="card in new1" :key="card.city" class="carousel-item bg-transparent" data-interval="false">
           <div class="card-deck card bg-light bg-transparent" style="padding-top:2%;padding-bottom:2%">
             <div class="card border-light bg-transparent">
-              <img v-bind:src="card.img" class="card-img-top news-img" alt="...">
+              <img v-bind:src="card.img" class="card-img-top" alt="...">
               <div class="card-body bg-transparent">
                 <h5 class="card-title bg-transparent">{{card.title}}</h5>
                 <small class="text-muted">{{card.date}}</small>
