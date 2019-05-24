@@ -71,9 +71,11 @@ export default {
         const user = res.data.data;
         const token = res.data.token;
         localStorage.setItem('token', token)
-      this.isLoading = false
       })
-      window.location.replace('/');
+      setTimeout(() => {
+        this.isLoading = false
+        window.location.replace('/');
+      },300)
     },
     onDismissed() {
       this.$store.dispatch('clearError')
