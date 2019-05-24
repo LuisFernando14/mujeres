@@ -43,14 +43,15 @@
         <div class="d-flex">
           <div class="mr-auto">
             <label class="lnr lnr-menu" v-on:click="onItemClick"></label>
-
-            <img
-              src="./../../assets/loguito.png"
-              class
-              alt="Agrimercante.com"
-              width="45"
-              style="margin-left: 10px;"
-            >
+            <a href="/">
+              <img
+                src="./../../assets/loguito.png"
+                class
+                alt="Agrimercante.com"
+                width="45"
+                style="margin-left: 10px;"
+              >
+            </a>
           </div>
           <div class="p-2">
             <div v-if="token">
