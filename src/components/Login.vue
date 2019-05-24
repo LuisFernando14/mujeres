@@ -66,16 +66,21 @@ export default {
     iniciarSesion() {
       this.isLoading = true
       this.$http.post('api/users/Login', this.user).then(res => {
-        // console.log(res.data.tokenHash);
-        console.log(res);
-        const user = res.data.data;
-        const token = res.data.token;
-        localStorage.setItem('token', token)
-      })
-      setTimeout(() => {
+        console.log(res.data.data)
+        console.log(!res.data.data===null)
+        if(res.data.data){
+          const user = res.data.data;
+          const token = res.data.token;
+          console.log("hola")
+          localStorage.setItem('token', token)
+          this.isLoading = false
+          window.location.replace('/');
+        }
+        else {
+          console.log("else")
+          }
         this.isLoading = false
-        window.location.replace('/');
-      },300)
+      })
     },
     onDismissed() {
       this.$store.dispatch('clearError')
