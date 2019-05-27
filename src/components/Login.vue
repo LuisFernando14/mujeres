@@ -12,7 +12,7 @@
               <h5 class="card-title text-center">Iniciar sesión</h5>
               <div id="loginForm">
                 <div class="form-group">
-                  <input autofocus type="email" name="Email" class="form-control" id="Email" v-model="user.Email" placeholder="Correo electrónico">
+                  <input ref="Email" type="email" name="Email" class="form-control" id="Email" v-model="user.Email" placeholder="Correo electrónico">
                 </div>
                 <div class="form-group">
                   <input type="password" name="Password" class="form-control" id="Password" v-model="user.Password" placeholder="Contraseña">
@@ -44,6 +44,8 @@
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
 import { finished } from 'stream';
+const $ = require("jquery");
+
 export default {
   name: 'login',
   components: {
@@ -66,18 +68,16 @@ export default {
     iniciarSesion() {
       this.isLoading = true
       this.$http.post('api/users/Login', this.user).then(res => {
-        console.log(res.data.data)
-        console.log(!res.data.data===null)
         if(res.data.data){
           const user = res.data.data;
           const token = res.data.token;
-          console.log("hola")
           localStorage.setItem('token', token)
           this.isLoading = false
           window.location.replace('/');
         }
         else {
-          console.log("else")
+          console.log("fe")
+          this.$refs.Email.focus();
           }
         this.isLoading = false
       })

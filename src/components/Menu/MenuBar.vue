@@ -5,7 +5,7 @@
         <div class="d-flex">
           <div class="mr-auto">
             <label v-show="token" class="lnr lnr-menu" v-on:click="onItemClick"></label>
-            <a href="/">
+            <a href="/" style="padding-left: 97px;">
               <img
                 v-if="token"
                 src="./../../assets/logo_banner.png"
@@ -27,7 +27,7 @@
             </a>
           </div>
           <div class="p-2">
-            <div v-if="token">
+            <div v-if="token" style="padding-right: 156px;">
               <router-link to="/"><button type="button" class="btn btn-secondary" v-on:click="cerrarSesion">Cerrar sesión</button></router-link>
             </div>
             <div v-else>
@@ -73,7 +73,7 @@
             <h2>LF</h2>
           </div>
           <a class="title" href="/">
-            <h4 id="nametitle" class="hidename title">Luis Fernando</h4>
+            <h4 id="nametitle" class="hidename title">{{username}}</h4>
           </a>
         </div>
         <router-link to="/">
@@ -178,6 +178,7 @@ export default {
   data() {
     return {
       token: localStorage.getItem("token") || 0,
+      username: localStorage.getItem("token"),
       menu: [
         {
           href: "/Noticias",
