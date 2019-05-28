@@ -60,7 +60,6 @@
                                     </div>
                                 </div>
                                 <h5>¿Dónde?</h5>
-
                                 <div class="form-row">
                                     <div class="form-group col-md-10">
                                         <label for="search_term">Seleccione un lugar</label>
@@ -130,16 +129,4 @@
     </div>
 </template>
 <script src="./classifieds.js">
-
-</script>
-<script>
-export default {
-  head: {
-    // To use "this" in the component, it is necessary to return the object through a function
-    title: {
-    inner: 'Clasificado',
-    separator: '-',
-    }
-  } 
-}
 </script>

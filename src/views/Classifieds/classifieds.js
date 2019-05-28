@@ -60,6 +60,12 @@ export default {
             $('.menu-Mobil ').addClass("menu-show-mobil");
             $('#nametitle').addClass("hidename");
         }
+    },  
+    head: {
+        // To use "this" in the component, it is necessary to return the object through a function
+        title: {
+        inner: 'Clasificado',
+        separator: '-',
+        }
+      } 
     }
-}
-
