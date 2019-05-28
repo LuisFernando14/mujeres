@@ -28,11 +28,11 @@
           </div>
           <div class="p-2">
             <div v-if="token" style="padding-right: 156px;">
-              <router-link to="/"><button type="button" class="btn btn-secondary" v-on:click="cerrarSesion">Cerrar sesión</button></router-link>
+              <router-link to="/"><button type="button" class="btn btn-outline-dark" v-on:click="cerrarSesion">Cerrar sesión</button></router-link>
             </div>
             <div v-else>
               <router-link to="/login"><a href style="padding-right: 5px; color: #6c757d">Iniciar sesión</a></router-link>
-              <router-link to="/signup"><button type="button" class="btn btn-outline-light">Regístrate</button></router-link>
+              <router-link to="/signup"><button type="button" class="btn btn-outline-dark">Regístrate</button></router-link>
             </div>
           </div>
         </div>
@@ -55,11 +55,11 @@
           </div>
           <div class="p-2">
             <div v-if="token">
-              <button type="button" class="btn btn-secondary" v-on:click="cerrarSesion">Cerrar sesión</button>
+              <button type="button" class="btn btn-outline-dark" v-on:click="cerrarSesion">Cerrar sesión</button>
             </div>
             <div v-else>
               <router-link to="/login"><a href style="padding-right: 5px; color: #6c757d">Iniciar sesión</a></router-link>
-              <router-link to="/signup"><button type="button" class="btn btn-outline-light">Regístrate</button></router-link>
+              <router-link to="/signup"><button type="button" class="btn btn-outline-dark">Regístrate</button></router-link>
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@
       <div v-if="token" class="menu" @mouseover="hoverr">
         <div class="line" style="padding-left: 6px;">
           <div class="circulo">
-            <h2>LF</h2>
+            <h2>{{letraName}}{{letraApellido}}</h2>
           </div>
           <a class="title" href="/">
             <h4 id="nametitle" class="hidename title">{{username}}</h4>
@@ -179,6 +179,8 @@ export default {
     return {
       token: localStorage.getItem("token") || 0,
       username: localStorage.getItem("token"),
+      letraName: localStorage.getItem("token").charAt(0),
+      letraApellido: localStorage.getItem("token").charAt(0),
       menu: [
         {
           href: "/Noticias",

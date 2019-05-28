@@ -132,3 +132,14 @@
 <script src="./classifieds.js">
 
 </script>
+<script>
+export default {
+  head: {
+    // To use "this" in the component, it is necessary to return the object through a function
+    title: {
+    inner: 'Clasificado',
+    separator: '-',
+    }
+  } 
+}
+</script>

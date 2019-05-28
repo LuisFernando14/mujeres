@@ -15,7 +15,7 @@
                   <input ref="Email" type="email" name="Email" class="form-control" id="Email" v-model="user.Email" placeholder="Correo electrónico">
                 </div>
                 <div class="form-group">
-                  <input type="password" name="Password" class="form-control" id="Password" v-model="user.Password" placeholder="Contraseña">
+                  <input type="password" name="Password" class="form-control" id="Password" v-model="user.Password" v-on:keyup.enter="iniciarSesion"  placeholder="Contraseña">
                 </div>
                 <div class="checkbox mb-3">
                   <label>

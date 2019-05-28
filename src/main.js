@@ -7,6 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/styles.css'
 import vueCountryRegionSelect from 'vue-country-region-select'
 import Places from "google-places-web";
+import VueHead from 'vue-head';
+
+Vue.use(VueHead)
 
 axios.defaults.baseURL = 'https://users220190523045749.azurewebsites.net'; // same as the Url the server listens to
 Vue.prototype.$http = axios;
