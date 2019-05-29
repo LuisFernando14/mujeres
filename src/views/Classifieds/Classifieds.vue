@@ -60,7 +60,6 @@
                                     </div>
                                 </div>
                                 <h5>¿Dónde?</h5>
-
                                 <div class="form-row">
                                     <div class="form-group col-md-10">
                                         <label for="search_term">Seleccione un lugar</label>
@@ -130,5 +129,4 @@
     </div>
 </template>
 <script src="./classifieds.js">
-
 </script>

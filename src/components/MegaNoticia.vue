@@ -3,7 +3,7 @@
   <div class="card mb-3" style="max-width:100%;">
   <div class="row no-gutters">
     <div class="col-md-4">
-      <img :src="news.img" class="card-img" alt="...">
+      <img :src="news.img" class="card-img" style="width: 360px; height: 420px; object-fit: cover; object-position: center;" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body ">
