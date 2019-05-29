@@ -102,11 +102,13 @@
             <font>Eventos</font>
           </label>
         </div>
+        <router-link to="/Prices">        
         <div class="line">
           <label class="lnr lnr-chart-bars">
             <font>Precios</font>
           </label>
         </div>
+        </router-link>
         <div class="line">
           <label class="lnr lnr-cloud">
             <font>Climas</font>

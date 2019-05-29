@@ -8,6 +8,7 @@ import './assets/css/styles.css'
 import VueHead from 'vue-head'
  
 Vue.use(VueHead)
+Vue.use(require('vue-moment'));
 
 
 axios.defaults.baseURL = 'https://users220190523045749.azurewebsites.net'; // same as the Url the server listens to
