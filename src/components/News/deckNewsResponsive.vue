@@ -2,6 +2,7 @@
   <div class="container">
     <div id="carouselExampleInterval" class="carousel slide" data-interval="false" data-ride="carousel">
       <div class="carousel-inner">
+
         <div class="carousel-item active" >
           <div class="card-deck card  bg-transparent" style="padding-top:2%;padding-bottom:2%">
             <div class="card border-light bg-transparent">
@@ -14,6 +15,7 @@
             </div>
           </div>
         </div>
+
         <div v-for="card in new1" :key="card.city" class="carousel-item bg-transparent" data-interval="false">
           <div class="card-deck card bg-light bg-transparent" style="padding-top:2%;padding-bottom:2%">
             <div class="card border-light bg-transparent">
@@ -26,6 +28,7 @@
             </div>
           </div>
         </div>
+        
       </div>
       <a
         style="border-radius:500px;width:40px;height:40px; "

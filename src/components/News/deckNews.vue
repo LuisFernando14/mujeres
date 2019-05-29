@@ -6,7 +6,7 @@
         <div v-for="card in new1" :key="card.city" class="card border-light">
           <img
             v-bind:src="card.img"
-            class="card-img-top news-img"
+            class="card-img-top "
             alt="..."
           >
           <div class="card-body">

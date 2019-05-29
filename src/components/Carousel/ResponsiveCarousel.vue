@@ -1,39 +1,73 @@
 <template>
-  <div class="container">
+  <div class="">
+    <div  class="container-fluid">
       <div
-        id="carouselExampleControls1"
+        v-bind:id="nombre"
         class="carousel slide"
         data-ride="carousel"
         data-interval="false"
       >
-        <div class="carousel-inner d-none d-sm-block d-none d-sm-block">
+      <!-- Mandamos llamar una noticia individual para el primer item -->
+        <div class="carousel-inner ">
           <div class="carousel-item active">
-            <Deck  v-bind:news="new1" v-bind:auxResp="true" ></Deck>
+            <!-- Para Noticias -->
+            <Deck v-if="nombre === 'noticias'" v-bind:news="newOne" v-bind:auxResp="false"></Deck>
+            <!-- Para Clima -->
+            <Deck v-if="nombre === 'weather'" v-bind:news="cardsOne" v-bind:auxResp="false"></Deck>
           </div>
-          <div class="carousel-item">
-            <Deck v-bind:news="new2" v-bind:auxResp="true"></Deck>
+      <!-- Iteramos con todas las noticias que tengamos -->
+          <div v-for="card in news" :key="card.city" class="carousel-item">
+            <Deck v-bind:news="card" v-bind:auxResp="false"></Deck>
           </div>
-          <div class="carousel-item">
-            <Deck  v-bind:news="new3" v-bind:auxResp="true"></Deck>
-          </div>
+          <btn v-bind:nombre="nombre" class="d-sm-none news-btn" ></btn>
         </div>
 
-        <Boton v-bind:nombre="'carouselExampleControls1'" class="d-none d-sm-block"></Boton>
-        
-        <!-- Cuando se activa el modo responsivo -->
-        <ResponsiveCarousel v-bind:nombre="'noticias'" class="d-sm-none" ></ResponsiveCarousel>
       </div>
+      
+    </div>
+ 
   </div>
 </template>
 <script>
 import Deck from "@/components/Carousel/Deck";
-import Boton from "@/components/Carousel/btn";
-import ResponsiveCarousel from "@/components/Carousel/ResponsiveCarousel";
+import btn from "@/components/Carousel/btn";
 
 export default {
   data: () => ({
-    new1: [
+    cardsOne:
+    {
+        city: "Cd. Guzmán",
+        state: "Jalisco",
+        src: "//cdn.apixu.com/weather/64x64/day/113.png",
+        flex: 3,
+        grade: "32°"
+      },
+    cards: [
       {
+        city: "Morelia",
+        state: "Michoacán",
+        src: "//cdn.apixu.com/weather/64x64/day/299.png",
+        flex: 3,
+        grade: "20°"
+      },
+      {
+        city: "Uruapan",
+        state: "Michoacán",
+        src: "//cdn.apixu.com/weather/64x64/day/116.png",
+        flex: 3,
+        grade: "27°"
+      },
+
+      {
+        city: "Zamora",
+        state: "Michoacán",
+        src: "//cdn.apixu.com/weather/64x64/day/122.png",
+        flex: 3,
+        grade: "16°"
+      }
+    ],
+    newOne:
+    {
         title: "EE. UU. comienza a importar el chile más picante",
         short:
           "Recientemente, la Asociación de Productores de Fresas de Florida (FSGA, por sus siglas en inglés)",
@@ -43,6 +77,8 @@ export default {
         img:
           "https://portal-data1.storage.googleapis.com/news/1558026964728_background-cayenne-chili-1091778.jpg"
       },
+
+    news: [
       {
         title: "México prepara nuevos gravámenes para los productos",
         short:
@@ -70,9 +106,7 @@ export default {
           "Con la firma del acuerdo fitosanitario entre China y México, se espera que este último pueda empezar a comercializar el plátano antes de que finalice el año.",
         img:
           "https://portal-data1.storage.googleapis.com/news/1558027392119_banana-fruit-healthy-yellow-41957.jpeg"
-      }
-    ],
-    new2: [
+      },
       {
         title: "Presenta Seipasa su nuevo departamento de microbiología ",
         short:
@@ -114,9 +148,7 @@ export default {
           "Beneficioso para los agricultores y para el medio ambiente. Así se presenta Tree T-PEE, un contenedor de agua y nutrientes creado con plástico reciclado que se ubica en la base de los árboles para protegerlos del frío y proveerlos del agua y el fertilizante que necesitan, ni una gota más.",
         img:
           "https://portal-data1.storage.googleapis.com/news/1557944184119_forest-path-trees-6037.jpg"
-      }
-    ],
-    new3: [
+      },
       {
         title: "Los mecanismos del envejecimiento vegetal",
         short:
@@ -158,15 +190,13 @@ export default {
         img:
           "https://portal-data1.storage.googleapis.com/news/1557936202750_accion-color-comida-1070980.jpg"
       }
-    ]
-  }),
-  props: ["cantidadCards"],
-
+]}),
   components: {
     Deck,
-    Boton,
-    ResponsiveCarousel
-  }
+    btn
+  },
+  props: ["nombre"],
 };
 </script>
+
 

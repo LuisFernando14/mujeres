@@ -4,7 +4,6 @@
     <News class="margin-2"  />
     <Weather class="margin-2"  />
     <Prices class="margin-2"  />
-    <Carousel class="margin-2"  />
     
   </div>
 </template>
@@ -36,9 +35,6 @@ export default {
         $('.menu').removeClass("menu-show");
         $('.menu-Mobil ').addClass("menu-show-mobil");
         $('#nametitle').addClass("hidename");
-
-        
-
         }
   }
 }

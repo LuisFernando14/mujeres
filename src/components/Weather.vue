@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="container-fluid">
-      <div class="card">
+      <div class="card d-none d-sm-block d-none d-sm-block">
         <div class="card-header ">
           <h1 class="h4 ">Climas en Zonas productoras</h1>
         </div>
@@ -22,10 +22,15 @@
           </div>
         </div>
       </div>
+      <div class="d-sm-none">
+        <ResponsiveCarousel v-bind:nombre="'weather'" class="d-sm-none" ></ResponsiveCarousel>
+      </div>
     </div>
   </div>
 </template>
 <script>
+import ResponsiveCarousel from "@/components/Carousel/ResponsiveCarousel";
+
 export default {
   data: () => ({
     cards: [
@@ -59,7 +64,12 @@ export default {
         flex: 3,
         grade: "16°"
       }
-    ]
-  })
+    ],
+    
+  }),
+  components:{
+    ResponsiveCarousel
+
+  }
 };
 </script>
