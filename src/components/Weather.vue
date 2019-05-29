@@ -22,7 +22,7 @@
           </div>
         </div>
       </div>
-      <div class="d-sm-none">
+      <div class="d-none">
         <ResponsiveCarousel v-bind:nombre="'weather'" class="d-sm-none" ></ResponsiveCarousel>
       </div>
     </div>
