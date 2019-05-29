@@ -97,6 +97,13 @@
             </label>
           </div>
         </router-link>
+        <router-link to="/Directories">
+          <div class="line">
+            <label class="lnr lnr-apartment">
+              <font>Directories</font>
+            </label>
+          </div>
+        </router-link>
         <div class="line">
           <label class="lnr lnr-calendar-full">
             <font>Eventos</font>
