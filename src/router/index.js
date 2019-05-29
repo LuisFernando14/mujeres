@@ -4,6 +4,7 @@ import UserSignUp from '@/views/User/UserSignUp';
 import UserLogin from '@/views/User/UserLogin';
 import Home from '@/views/Home/Home';
 import Classifieds from '@/views/Classifieds/Classifieds.vue';
+import VueGoodTable from '@/views/Prices/Prices.vue'
 
 Vue.use(Router)
 
@@ -14,6 +15,11 @@ let router = new Router({
       path: '/signup',
       name: 'signup',
       component: UserSignUp
+    },
+    {
+      path: '/Prices',
+      name: 'Prices',
+      component: VueGoodTable
     },
     {
       path: '/login',
