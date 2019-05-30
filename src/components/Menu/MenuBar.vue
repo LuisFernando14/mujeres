@@ -85,15 +85,22 @@
         </router-link>
         <router-link to="/">
           <div class="line">
-            <label class="lnr lnr-briefcase">
+            <label class="lnr lnr-earth">
               <font>Noticias</font>
             </label>
           </div>
         </router-link>
         <router-link to="/classifieds/add">
           <div class="line">
-            <label class="lnr lnr-briefcase">
+            <label class="lnr lnr-cart">
               <font>Clasificados</font>
+            </label>
+          </div>
+        </router-link>
+        <router-link to="/Directories">
+          <div class="line">
+            <label class="lnr lnr-phone-handset">
+              <font>Directorios</font>
             </label>
           </div>
         </router-link>
@@ -117,25 +124,37 @@
       </div>
     </div>
     <div class="d-sm-none">
-      <div class="menu-Mobil menu-show-mobil" v-on:click="onItemClick">
+      <div  v-if="token" class="menu-Mobil menu-show-mobil" v-on:click="onItemClick">
+        <div class="line" style="padding-left: 6px;">
+          <div class="circulo">
+            <h2>{{letraName}}{{letraApellido}}</h2>
+          </div>
+        </div>
         <router-link to="/">
           <div class="line">
-            <label class="lnr lnr-home">
+            <label class="lnr lnr-home" to="/">
               <font>Inicio</font>
             </label>
           </div>
         </router-link>
         <router-link to="/">
           <div class="line">
-            <label class="lnr lnr-briefcase">
+            <label class="lnr lnr-earth">
               <font>Noticias</font>
             </label>
           </div>
         </router-link>
         <router-link to="/classifieds/add">
           <div class="line">
-            <label class="lnr lnr-briefcase">
+            <label class="lnr lnr-cart">
               <font>Clasificados</font>
+            </label>
+          </div>
+        </router-link>
+        <router-link to="/Directories">
+          <div class="line">
+            <label class="lnr lnr-phone-handset">
+              <font>Directorios</font>
             </label>
           </div>
         </router-link>
@@ -144,11 +163,13 @@
             <font>Eventos</font>
           </label>
         </div>
+        <router-link to="/Prices">        
         <div class="line">
           <label class="lnr lnr-chart-bars">
             <font>Precios</font>
           </label>
         </div>
+        </router-link>
         <div class="line">
           <label class="lnr lnr-cloud">
             <font>Climas</font>
