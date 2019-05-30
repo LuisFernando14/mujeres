@@ -44,7 +44,7 @@
                                         <label for="inputPassword12">Selecciona una categoría</label>
                                         <select class="form-control" @change="setCat(sortType)" name="sell"
                                                 id="inputPassword12" v-model="sortType">
-                                            <option :click="hazAlgo" v-for="category in categories"
+                                            <option v-for="category in categories"
                                                     :key="category.value" :value="category.value">{{ category.text }}
                                             </option>
                                         </select>
@@ -53,7 +53,7 @@
                                         <label for="inputPassword16">Selecciona una subcategoría</label>
                                         <select class="form-control" @change="setSub(sortType)" name="sell"
                                                 id="inputPassword16" v-model="sortType">
-                                            <option :click="hazAlgo" v-for="sub in subcategories" :key="sub.value"
+                                            <option  v-for="sub in subcategories" :key="sub.value"
                                                     :value="sub.value">{{ sub.text }}
                                             </option>
                                         </select>
