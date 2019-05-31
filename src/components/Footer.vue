@@ -1,5 +1,5 @@
 <template>
-  <footer class="margin blog-footer" style="background-color:#2e2e2f;color:white; ">
+  <div class="margin blog-footer" style="background-color:#2e2e2f;color:white; ">
     
     <div class="container">
       <div class="row justify-content-center">
@@ -34,7 +34,7 @@
       </div>
       
     </div>
-  </footer>
+  </div>
 </template>
 <script>
 export default {

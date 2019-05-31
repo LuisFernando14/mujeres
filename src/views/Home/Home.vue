@@ -5,6 +5,8 @@
     <Weather class="margin-2"  />
     <Prices class="margin-2"  />
     
+    
+    
   </div>
 </template>
 
@@ -17,6 +19,7 @@ import Prices from '@/components/Prices';
 import Carousel from '@/components/Carousel/Carousel';
 
 
+
 export default {
   name:'Home',
   components: {
@@ -25,6 +28,7 @@ export default {
     News,
     Prices,
     Carousel,
+    
   },
   methods:{
     showOne() {

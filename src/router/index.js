@@ -6,6 +6,7 @@ import Home from '@/views/Home/Home';
 import Classifieds from '@/views/Classifieds/Classifieds.vue';
 import VueGoodTable from '@/views/Prices/Prices.vue'
 import Directories from '@/views/Directories/Directories.vue';
+import Profile from '@/views/Profile/Profile.vue';
 
 Vue.use(Router)
 
@@ -21,6 +22,12 @@ let router = new Router({
       path: '/Prices',
       name: 'Prices',
       component: VueGoodTable
+      
+    },
+    {
+      path: '/Profile',
+      name: 'Profile',
+      component: Profile
       
     },
     {
