@@ -8,20 +8,22 @@
             <a href="/" style="padding-left: 97px;">
               <img
                 v-if="token"
-                src="./../../assets/logo_banner.png"
+                src="./../../assets/images/logo-horizontal.png"
                 class
                 alt="Agrimercante.com"
                 width="190"
+                height="45"
                 style="margin-left: 1.8em;"
               >
             </a>
             <a href="/">
               <img
                 v-if="!token"
-                src="./../../assets/logo_banner.png"
+                src="./../../assets/images/logo-horizontal.png"
                 class
                 alt="Agrimercante.com"
                 width="190"
+                height="45"
                 style="margin-left: 10px;padding-top: 10px;"
               >
             </a>
@@ -45,7 +47,7 @@
             <label class="lnr lnr-menu" v-on:click="onItemClick"></label>
             <a href="/">
               <img
-                src="./../../assets/loguito.png"
+                src="./../../assets/images/puro-sinaloa.jpg"
                 class
                 alt="Agrimercante.com"
                 width="45"
@@ -86,41 +88,36 @@
         <router-link to="/">
           <div class="line">
             <label class="lnr lnr-earth">
-              <font>Noticias</font>
+              <font>Categorías</font>
             </label>
           </div>
         </router-link>
         <router-link to="/classifieds/add">
           <div class="line">
             <label class="lnr lnr-cart">
-              <font>Clasificados</font>
+              <font>Mujeres</font>
             </label>
           </div>
         </router-link>
         <router-link to="/Directories">
           <div class="line">
             <label class="lnr lnr-phone-handset">
-              <font>Directorios</font>
+              <font>Denuncias</font>
             </label>
           </div>
         </router-link>
         <div class="line">
           <label class="lnr lnr-calendar-full">
-            <font>Eventos</font>
+            <font>Mapa</font>
           </label>
         </div>
-        <router-link to="/Prices">        
+        <router-link to="/Prices">
         <div class="line">
           <label class="lnr lnr-chart-bars">
-            <font>Precios</font>
+            <font>Zonas</font>
           </label>
         </div>
         </router-link>
-        <div class="line">
-          <label class="lnr lnr-cloud">
-            <font>Climas</font>
-          </label>
-        </div>
       </div>
     </div>
     <div class="d-sm-none">
@@ -163,7 +160,7 @@
             <font>Eventos</font>
           </label>
         </div>
-        <router-link to="/Prices">        
+        <router-link to="/Prices">
         <div class="line">
           <label class="lnr lnr-chart-bars">
             <font>Precios</font>
@@ -197,13 +194,13 @@ export default {
   name: "App",
   components:{
     Loading
-  }, 
+  },
   data() {
     return {
-      token: localStorage.getItem("token") || 0,
-      username: localStorage.getItem("token"),
-      letraName: localStorage.getItem("token").charAt(0),
-      letraApellido: localStorage.getItem("token").charAt(0),
+      token: 'token',
+      username: 'Luis Fernando',
+      letraName: 'L',
+      letraApellido: 'M',
       menu: [
         {
           href: "/Noticias",

@@ -6,8 +6,8 @@
                     <div class="card card-signin my-5">
                         <div class="card-body">
                             <div class="text-center">
-                                <img class="img-fluid" src="https://agrimercante.com/images/layout/logo_banner.png"
-                                     alt="AgriMercnate Logo">
+                                <img class="img-fluid" style="height: 100px" src="../assets/images/logo-horizontal.png"
+                                     alt="Aplicación mujeres">
                             </div>
                             <div class="form-group">
                                 <label for="inputAddress">Nombre</label>
@@ -42,7 +42,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="text-right"><input type="button" id="btnLogin" class="form-control btn btn-lg" style="background-color: #f7b334" value="Registrarse"
+                            <div class="text-right"><input type="button" id="btnLogin" class="form-control btn btn-lg btn-info" value="Registrarse"
                                                            @click="register">
                             </div>
                         </div>

@@ -6,7 +6,7 @@
           <div class="card card-signin my-5">
             <div class="card-body">
               <div class="text-center">
-                <img class="img-fluid" src="https://agrimercante.com/images/layout/logo_banner.png" alt="AgriMercnate Logo">
+                <img class="img-fluid" src="./../assets/images/puro-sinaloa.jpg" style="height: 120px" alt="Aplicación de mujeres logo">
               </div>
               <br>
               <h5 class="card-title text-center">Iniciar sesión</h5>
